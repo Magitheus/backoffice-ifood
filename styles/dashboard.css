@@ -1,0 +1,132 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+    align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; /* Faz com que os cards cresçam igualmente */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 19.85px;
+    font-weight: 400; /* Aumentado para deixar o texto mais espesso */
+    line-height: 28px;
+    word-wrap: break-word;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.saldo-card .card-header {
+    color: black; /* Cor para o header do card Saldo */
+}
+
+.faturamento-card .card-header {
+    color: #5D99F4; /* Cor para o header do card Faturamento */
+}
+
+.entrada-card .card-header {
+    color: #128900; /* Cor para o header do card Entrada */
+}
+
+.saida-card .card-header {
+    color: #890019; /* Cor para o header do card Saída */
+}
+
+.card-header .info-icon {
+    background-color: #ddd;
+    color: #717171;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding-left: 8px;
+}
+
+.card-content .currency-saldo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #000;
+    font-weight: 700;
+}
+
+.card-content .currency-faturamento {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #5D99F4;
+    font-weight: 700;
+}
+
+.card-content .currency-entrada {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #128900;
+    font-weight: 700;
+}
+
+.card-content .currency-saida {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #890019;
+    font-weight: 700;
+}
+
+.card-content .amount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18.91px;
+    font-weight: 400;
+    color: #999;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.card:nth-child(1) .amount {
+    color: #000;
+}
+
+.card:nth-child(2) .amount {
+    color: #5D99F4;
+}
+
+.card:nth-child(3) .amount {
+    color: #128900;
+}
+
+.card:nth-child(4) .amount {
+    color: #890019;
+}
