@@ -15,17 +15,89 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/dashboard.css" />
     <title>Backoffice | Dashboard</title>
   </head>
-<body>
-  <h1>Dashboard</h1>
+  <body>
+    <nav class="lateral"></nav>
 
-  <!-- <script src="../scripts/main.js"></script> -->
+    <div class="container">
+      <div class="row mt-5 d-flex justify-content-evenly gap-3">
+
+        <div class="col bg-secondary">
+          One of three columns
+        </div>
+        <div class="col bg-secondary">
+          <div class="cards-container">
+            <div class="card saldo-card">
+              <div class="card-header">
+                <span>Saldo</span>
+                <span class="info-icon">i</span>
+              </div>
+              <div class="card-content">
+                <span class="currency-saldo">R$</span>
+                <span class="amount">1.854,89</span>
+              </div>
+              <div class="card-footer">
+                <span>Previsão</span>
+                <span class="prediction">R$ 22.048,90</span>
+              </div>
+            </div>
+      
+            <div class="card faturamento-card">
+              <div class="card-header">
+                <span>Faturamento</span>
+                <span class="info-icon">i</span>
+              </div>
+              <div class="card-content">
+                <span class="currency-faturamento">R$</span>
+                <span class="amount">541,22</span>
+              </div>
+              <div class="card-footer">
+                <span>Médias anteriores</span>
+                <span class="prediction">R$ 602,41</span>
+              </div>
+            </div>
+      
+            <div class="card entrada-card">
+              <div class="card-header">
+                <span>Entrada</span>
+                <span class="info-icon">i</span>
+              </div>
+              <div class="card-content">
+                <span class="currency-entrada">R$</span>
+                <span class="amount">8.212,36</span>
+              </div>
+              <div class="card-footer">
+                <span>Previsão</span>
+                <span class="prediction">R$ 28.212,36</span>
+              </div>
+            </div>
+      
+            <div class="card saida-card">
+              <div class="card-header">
+                <span>Saída</span>
+                <span class="info-icon">i</span>
+              </div>
+              <div class="card-content">
+                <span class="currency-saida">R$</span>
+                <span class="amount">6.357,47</span>
+              </div>
+              <div class="card-footer">
+                <span>Previsão</span>
+                <span class="prediction">R$ 6.417,00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>

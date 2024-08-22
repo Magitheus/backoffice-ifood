@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --forms: 47.3rem;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* TEMA */
+/* [data-bs-theme=dark] {
+  }
+  */
+[data-bs-theme="light"] {
+  --bs-gray: #3e3e3e;
+  --bs-gray-light: #717171;
+  --bs-red: #ea1d2c;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 100vw;
+  overflow: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row>* {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  /* padding: 20px; */
+  align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1.0rem;
+  box-shadow: .0rem .4rem .6rem rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Faz com que os cards cresçam igualmente */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400; /* Aumentado para deixar o texto mais espesso */
+  line-height: .28rem;
+  word-wrap: break-word;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.saldo-card .card-header {
+  color: black; /* Cor para o header do card Saldo */
+}
+
+.faturamento-card .card-header {
+  color: #5d99f4; /* Cor para o header do card Faturamento */
+}
+
+.entrada-card .card-header {
+  color: #128900; /* Cor para o header do card Entrada */
+}
+
+.saida-card .card-header {
+  color: #890019; /* Cor para o header do card Saída */
+}
+
+.card-header .info-icon {
+  background-color: #ddd;
+  color: #717171;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin: 1.0rem;
+  padding-left: .8rem;
+}
+
+.card-content .currency-saldo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: .5rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.card-content .currency-faturamento {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: .5rem;
+  color: #5d99f4;
+  font-weight: 700;
+}
+
+.card-content .currency-entrada {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: .5rem;
+  color: #128900;
+  font-weight: 700;
+}
+
+.card-content .currency-saida {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: .5rem;
+  color: #890019;
+  font-weight: 700;
+}
+
+.card-content .amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #999;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.card:nth-child(1) .amount {
+  color: #000;
+}
+
+.card:nth-child(2) .amount {
+  color: #5d99f4;
+}
+
+.card:nth-child(3) .amount {
+  color: #128900;
+}
+
+.card:nth-child(4) .amount {
+  color: #890019;
+}
