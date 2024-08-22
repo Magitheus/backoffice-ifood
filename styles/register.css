@@ -1,7 +1,6 @@
 body {
   margin: 0;
   line-height: normal;
-
 }
 
 .ifood-43-1-icon {
@@ -12,6 +11,7 @@ body {
   height: 63.4px;
   object-fit: cover;
 }
+
 .cda-7f06-40d7-b0bd-8d76597617b-icon {
   position: absolute;
   top: 40px;
@@ -20,8 +20,8 @@ body {
   width: 921px;
   height: 892px;
   object-fit: cover;
-
 }
+
 .cadastro-child {
   position: absolute;
   top: 390px;
@@ -33,6 +33,7 @@ body {
   width: 492px;
   height: 48px;
 }
+
 .a-oportunidade-que {
   position: absolute;
   top: 494px;
@@ -43,107 +44,95 @@ body {
   width: 782px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .faa-seu-cadastro {
   position: absolute;
   top: 237px;
   left: 67px;
   font-size: 64px;
 }
-.nome {
+
+.label {
   position: absolute;
+  font-size: 16px;
+  color: #333;
+}
+
+.nome {
   top: 355px;
   left: 63px;
 }
-.nome-sobrenome {
-  position: absolute;
-  top: 401px;
-  left: 87px;
-  color: #cdcccc;
-  display: inline-block;
-  width: 440px;
-}
-.cadastro-item {
-  position: absolute;
-  top: 517px;
-  left: 63px;
-  border-radius: 7px;
-  background-color: #fff;
-  border: 1px solid #cdcccc;
-  box-sizing: border-box;
-  width: 492px;
-  height: 48px;
-}
+
 .e-mail {
-  position: absolute;
   top: 482px;
-  left: 68px;
-}
-.emailemailcombr {
-  position: absolute;
-  top: 528px;
-  left: 87px;
-  color: #d9d8d8;
-  text-decoration: none;
-}
-.cadastro-inner {
-  position: absolute;
-  top: 644px;
   left: 63px;
-  border-radius: 7px;
-  background-color: #fff;
-  border: 1px solid #cdcccc;
-  box-sizing: border-box;
-  width: 492px;
-  height: 48px;
 }
+
 .celular-com-ddd {
-  position: absolute;
   top: 609px;
   left: 63px;
 }
-.div {
+
+.input {
   position: absolute;
-  top: 655px;
-  left: 87px;
-  color: #d9d8d8;
+  border-radius: 7px;
+  background-color: #fff;
+  border: 1px solid #cdcccc;
+  box-sizing: border-box;
+  width: 492px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
 }
-.rectangle-div {
-  position: absolute;
-  top: 771px;
-  left: 320px;
-  border-radius: 5px;
-  background-color: #ea1d2c;
-  width: 235px;
-  height: 46px;
+
+#nome {
+  top: 390px;
+  left: 63px;
 }
-.cadastrar {
-  position: absolute;
-  top: 781px;
-  left: 390px;
-  color: #fff;
-  display: inline-block;
-  width: 94px;
+
+#email {
+  top: 517px;
+  left: 63px;
 }
-.cadastro-child1 {
+
+#telefone {
+  top: 644px;
+  left: 63px;
+}
+
+.button-container {
   position: absolute;
   top: 771px;
   left: 63px;
+  display: flex;
+  gap: 16px; /* Espaço entre os botões */
+}
+
+.button {
   border-radius: 5px;
-  background-color: #fff;
-  border: 1px solid #ea1d2c;
-  box-sizing: border-box;
   width: 232px;
   height: 46px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.cadastrar {
+  background-color: #ea1d2c;
+}
+
 .j-sou-parceiro {
-  position: absolute;
-  top: 781px;
-  left: 109px;
-  font-weight: 300;
+  background-color: #fff;
+  border: 1px solid #ea1d2c;
   color: #ea1d2c;
-  display: inline-block;
-  width: 140px;
 }
+
 .line-icon {
   position: absolute;
   top: 220px;
@@ -152,6 +141,7 @@ body {
   height: 4px;
   object-fit: contain;
 }
+
 .cadastro {
   width: 100%;
   position: relative;
@@ -161,5 +151,5 @@ body {
   text-align: left;
   font-size: 22px;
   color: #333;
-  font-family: 'Inria Sans';
+  font-family: 'Inria Sans', sans-serif;
 }
