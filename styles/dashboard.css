@@ -23,7 +23,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   overflow: overlay;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,26 @@ body {
   justify-content: center;
 }
 
-.row>* {
+.nav {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 9.9rem;
+  height: 102.4rem;
+  padding-top: 11rem; 
+  justify-content: center;
+  align-items: center;
+  gap: 5.8rem;
+  flex-shrink: 0;
+  background: var(--bs-red, #ea1d2c);
+  box-shadow: 4px 0px 4px 5px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  margin-left: 13.3rem;
+}
+
+.row > * {
   padding-right: 0;
   padding-left: 0;
 }
@@ -46,8 +65,8 @@ body {
 
 .card {
   background-color: #fff;
-  border-radius: 1.0rem;
-  box-shadow: .0rem .4rem .6rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0rem 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -62,7 +81,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 400; /* Aumentado para deixar o texto mais espesso */
-  line-height: .28rem;
+  line-height: 0.28rem;
   word-wrap: break-word;
   background-color: #fff;
   border-color: #fff;
@@ -102,14 +121,14 @@ body {
   align-items: baseline;
   justify-content: space-between;
   font-size: 1.5rem;
-  margin: 1.0rem;
-  padding-left: .8rem;
+  margin: 1rem;
+  padding-left: 0.8rem;
 }
 
 .card-content .currency-saldo {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #000;
   font-weight: 700;
 }
@@ -117,7 +136,7 @@ body {
 .card-content .currency-faturamento {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #5d99f4;
   font-weight: 700;
 }
@@ -125,7 +144,7 @@ body {
 .card-content .currency-entrada {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #128900;
   font-weight: 700;
 }
@@ -133,7 +152,7 @@ body {
 .card-content .currency-saida {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #890019;
   font-weight: 700;
 }
