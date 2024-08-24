@@ -31,9 +31,7 @@
 
     <div class="container">
       <div class="row mt-5 d-flex justify-content-evenly gap-3">
-
-        <div class="col bg-secondary">
-        </div>
+        <div class="col bg-secondary"></div>
         <div class="col bg-secondary">
           <div class="cards-container">
             <div class="card saldo-card">
@@ -50,7 +48,6 @@
                 <span class="prediction">R$ 22.048,90</span>
               </div>
             </div>
-      
             <div class="card faturamento-card">
               <div class="card-header">
                 <span>Faturamento</span>
@@ -65,7 +62,6 @@
                 <span class="prediction">R$ 602,41</span>
               </div>
             </div>
-      
             <div class="card entrada-card">
               <div class="card-header">
                 <span>Entrada</span>
@@ -80,7 +76,6 @@
                 <span class="prediction">R$ 28.212,36</span>
               </div>
             </div>
-      
             <div class="card saida-card">
               <div class="card-header">
                 <span>Saída</span>
@@ -98,9 +93,33 @@
           </div>
         </div>
       </div>
+
+      <!-- Novo container com os 4 cards -->
+      <div class="row mt-4 d-flex justify-content-evenly gap-3 custom-row">
+        <div class="col-12 d-flex justify-content-between custom-col">
+          <div class="custom-card incluir-receita" onclick="window.location.href='url-incluir-receita.html';">
+            <img src="../assets/incluir-receita-icon.svg" alt="Incluir Receita">
+            <span>Incluir Receita</span>
+          </div>
+          <div class="custom-card incluir-despesa" onclick="window.location.href='url-incluir-despesa.html';">
+            <img src="../assets/incluir-despesa-icon.svg" alt="Incluir Despesa">
+            <span>Incluir Despesa</span>
+          </div>
+          <div class="custom-card incluir-transacao" onclick="window.location.href='url-incluir-transacao.html';">
+            <img src="../assets/incluir-transacao-icon.svg" alt="Incluir Transação">
+            <span>Incluir Transação</span>
+          </div>
+          <div class="custom-card categorias" onclick="window.location.href='url-categorias.html';">
+            <img src="../assets/categorias-icon.svg" alt="Categorias">
+            <span>Categorias</span>
+          </div>
+        </div>
+      </div>
+      
+      
+
     </div>
 
-   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
