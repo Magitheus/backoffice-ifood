@@ -9,6 +9,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,93 +22,177 @@
     <link rel="stylesheet" href="../styles/dashboard.css" />
     <title>Backoffice | Dashboard</title>
   </head>
-  <body>
-    <nav class="nav flex-column">
-      <img src="../assets/logo-white.svg" alt="">
-      <a class="nav-link active" aria-current="page" href="#"><img src="../assets/home.svg" alt=""></a>
-      <a class="nav-link" href="../pages/banks.html"><img src="../assets/bank.svg" alt=""></a>
-      <a class="nav-link" href="../pages/chart.html"><img src="../assets/chart.svg" alt=""></a>
-      <a class="nav-link" href="../pages/rh.html"><img src="../assets/pepleo-bag.svg" alt=""></a>
-      <a class="nav-link" href="../pages/report.html"><img src="../assets/sheet.svg" alt=""></a>
-      <a class="nav-link" href="../pages/settings.html"><img src="../assets/config.svg" alt=""></a>
+  <body class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"
+        ><img src="../assets/logo-white.svg" alt=""
+      /></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="nav-link active" aria-current="page" href="#"
+          ><img src="../assets/home.svg" alt="" />
+          <p>Painéis</p>
+        </a>
+        <a class="nav-link" href="../pages/banks.html"
+          ><img src="../assets/bank.svg" alt="" />
+          <p>Contas</p>
+        </a>
+        <a class="nav-link" href="../pages/chart.html"
+          ><img src="../assets/chart.svg" alt="" />
+          <p>Gráficos</p></a
+        >
+        <a class="nav-link" href="../pages/employees.html"
+          ><img src="../assets/pepleo-bag.svg" alt="" />
+          <p>Funcionários</p></a
+        >
+        <a class="nav-link" href="../pages/transactions.html"
+          ><img src="../assets/sheet.svg" alt="" />
+          <p>Relatórios</p></a
+        >
+        <a class="nav-link" href="../pages/settings.html"
+          ><img src="../assets/config.svg" alt="" />
+          <p>Configurações</p></a
+        >
+      </div>
     </nav>
-
-    <div class="container">
-      <div class="row mt-5 d-flex justify-content-evenly gap-3">
-
-        <div class="col bg-secondary">
+    <div class="row d-flex justify-content-start gap-3 mt-5">Joao</div>
+    <div class="row d-flex justify-content-evenly gap-3">
+      <div class="col bg-secondary">
+        <div class="space">
+          <p>Caio - Notificacao</p>
         </div>
-        <div class="col bg-secondary">
-          <div class="cards-container">
-            <div class="card saldo-card">
-              <div class="card-header">
-                <span>Saldo</span>
-                <span class="info-icon">i</span>
-              </div>
-              <div class="card-content">
-                <span class="currency-saldo">R$</span>
-                <span class="amount">1.854,89</span>
-              </div>
-              <div class="card-footer">
-                <span>Previsão</span>
-                <span class="prediction">R$ 22.048,90</span>
-              </div>
+        <div class="space">
+          <p>Renan - Botoes</p>
+        </div>
+        <div class="space">
+          <p>João - Contas</p>
+        </div>
+        <div id="additional-card">
+          <p>Deseja adicionar um novo card ?</p>
+        </div>
+      </div>
+      <div class="col bg-secondary">
+        <div class="cards-container">
+          <div class="card saldo-card">
+            <div class="card-header">
+              <span>Saldo</span>
+              <span class="info-icon">i</span>
             </div>
-      
-            <div class="card faturamento-card">
-              <div class="card-header">
-                <span>Faturamento</span>
-                <span class="info-icon">i</span>
-              </div>
-              <div class="card-content">
-                <span class="currency-faturamento">R$</span>
-                <span class="amount">541,22</span>
-              </div>
-              <div class="card-footer">
-                <span>Médias anteriores</span>
-                <span class="prediction">R$ 602,41</span>
-              </div>
+            <div class="card-content">
+              <span class="currency-saldo">R$</span>
+              <span class="amount">1.854,89</span>
             </div>
-      
-            <div class="card entrada-card">
-              <div class="card-header">
-                <span>Entrada</span>
-                <span class="info-icon">i</span>
-              </div>
-              <div class="card-content">
-                <span class="currency-entrada">R$</span>
-                <span class="amount">8.212,36</span>
-              </div>
-              <div class="card-footer">
-                <span>Previsão</span>
-                <span class="prediction">R$ 28.212,36</span>
-              </div>
-            </div>
-      
-            <div class="card saida-card">
-              <div class="card-header">
-                <span>Saída</span>
-                <span class="info-icon">i</span>
-              </div>
-              <div class="card-content">
-                <span class="currency-saida">R$</span>
-                <span class="amount">6.357,47</span>
-              </div>
-              <div class="card-footer">
-                <span>Previsão</span>
-                <span class="prediction">R$ 6.417,00</span>
-              </div>
+            <div class="card-footer">
+              <span>Previsão</span>
+              <span class="prediction">R$ 22.048,90</span>
             </div>
           </div>
+
+          <div class="card faturamento-card">
+            <div class="card-header">
+              <span>Faturamento</span>
+              <span class="info-icon">i</span>
+            </div>
+            <div class="card-content">
+              <span class="currency-faturamento">R$</span>
+              <span class="amount">541,22</span>
+            </div>
+            <div class="card-footer">
+              <span>Médias anteriores</span>
+              <span class="prediction">R$ 602,41</span>
+            </div>
+          </div>
+
+          <div class="card entrada-card">
+            <div class="card-header">
+              <span>Entrada</span>
+              <span class="info-icon">i</span>
+            </div>
+            <div class="card-content">
+              <span class="currency-entrada">R$</span>
+              <span class="amount">8.212,36</span>
+            </div>
+            <div class="card-footer">
+              <span>Previsão</span>
+              <span class="prediction">R$ 28.212,36</span>
+            </div>
+          </div>
+
+          <a href="./expense.html" class="card saida-card">
+            <div class="card-header">
+              <span>Saída</span>
+              <span class="info-icon">i</span>
+            </div>
+            <div class="card-content">
+              <span class="currency-saida">R$</span>
+              <span class="amount">6.357,47</span>
+            </div>
+            <div class="card-footer">
+              <span>Previsão</span>
+              <span class="prediction">R$ 6.417,00</span>
+            </div>
+          </a>
+        </div>
+        <div id="chart">
+          <div id="chart-header">
+            <div>
+              <p>Gráficos</p>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+            <i class="bi bi-info-circle-fill"></i>
+          </div>
+          <div id="chart-body">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="space">
+          <p>Caio - Lojas</p>
         </div>
       </div>
     </div>
 
-   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          datasets: [
+            {
+              label: "Saldo",
+              data: [81, 56, 55, 40],
+              fill: false,
+              borderColor: "#3483F9",
+              tension: 0.1,
+            },
+            {
+              label: "Despesa",
+              data: [65, 59, 80, 81],
+              fill: false,
+              borderColor: "#C20F0F",
+              tension: 0.5,
+            },
+          ],
+        },
+      });
+    </script>
   </body>
 </html>
