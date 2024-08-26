@@ -287,12 +287,10 @@ a.nav-link p {
   color: #890019;
 }
 
-/* Container principal dos cards */
 .custom-row {
-  width: 50%; /* Ajuste conforme necessário */
+  width: 50%;
 }
 
-/* Estilos para os cards */
 .custom-col {
   display: flex;
   justify-content: space-between;
