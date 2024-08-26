@@ -20,22 +20,43 @@
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
-  height: 100vh;
-  width: 100vw;
-  overflow: overlay;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* transform: scale(2); */
 }
+
+#circle {
+  z-index: -5;
+  position: absolute;
+  left: 50%;
+  /* width: 150em;
+  height: 150rem; */
+  border-radius: 50%; /* O círculo é criado aqui */
+  box-shadow: 0px 4px 15.2px 2px rgba(0, 0, 0, 0.25) inset;
+  background: #EDEDED;
+  flex-shrink: 0;
+  clip-path: inset(0 50% 0 0); /* Recorta a metade superior do círculo */
+}
+
 
 main {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 33px;
+  padding-left: .2rem;
+}
+
+img {
+  z-index: -6;
 }
 
 #line {
@@ -46,7 +67,6 @@ main {
 
 #form {
   display: flex;
-  width: var(--forms, 49.4rem);
   min-width: 36.8rem;
   max-width: var(--forms, 49.4rem);
   flex-direction: column;
@@ -60,7 +80,7 @@ main {
   font-weight: 700;
   line-height: 7rem;
 }
-#form #input {
+#form .input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -73,7 +93,7 @@ main {
   font-size: 1.9rem;
 }
 
-#form #input input {
+#form .input input {
   position: relative;
   display: flex;
   padding: 1.2rem 2.4rem;
@@ -85,16 +105,17 @@ main {
   align-self: stretch;
 }
 
-#form #input input:focus{
+#form .input input:focus {
   border-color: var(--bs-red);
   outline: var(--bs-red);
 }
 
-#form #input button {
+#form .input button {
   position: relative;
   bottom: 5rem;
-  left: 42rem;
+  left: 90%;
   border-color: transparent;
+  background-color: transparent;
 }
 
 #remember {
@@ -148,4 +169,19 @@ a {
   color: var(--bs-gray-light, #717171);
   font-size: 1.9852rem;
   line-height: 2.8rem;
+  cursor: not-allowed;
+}
+
+#liveToast {
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+
+  background: var(--bs-red, #ea1d2c);
+  color: var(--bs-white, #fff);
+}
+
+
+.toast-container {
+  top: 28vh;
 }

@@ -14,26 +14,143 @@
   }
   */
 [data-bs-theme="light"] {
-  --bs-gray: #3e3e3e;
-  --bs-gray-light: #717171;
-  --bs-red: #ea1d2c;
+  --hue: 0;
+  --bs-gray: hsl(var(--hue), 0%, 24%);
+  --bs-gray-light: hsl(var(--hue), 0%, 44%);
+  --bs-red: hsl(calc(var(--hue) + 356), 83%, 52%);
+  --bs-info: hsl(calc(var(--hue) + 216), 87%, 55%);
 }
 
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
-  height: 100vh;
-  width: 100vw;
+  height: fit-content;
+  width: auto;
   overflow: overlay;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ededed;
 }
 
-.row>* {
-  padding-right: 0;
-  padding-left: 0;
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+.navbar {
+  position: sticky;
+  background: var(--bs-red, #ea1d2c);
+  width: 9.9rem;
+  align-items: start;
+  transition: width 0.3s ease, transform 0.3s ease, align-items 0.3s ease;
+}
+
+.navbar:hover {
+  width: 21.8rem;
+  align-items: start;
+}
+
+.nav-link {
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  align-self: stretch;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid transparent;
+}
+
+.nav-link:hover {
+  border-color: #fff;
+}
+
+a.nav-link p {
+  display: none;
+  margin: 0;
+}
+
+.navbar:hover a.nav-link p {
+  display: flex;
+  color: #fff;
+
+  /* Text Style Ifood/Inter/Bold 18.91 */
+  font-size: 1.9rem;
+  font-weight: 700;
+  align-items: center;
+}
+
+a.nav-link.active {
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #fff;
+}
+
+a.nav-link p {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .navbar-collapse {
+    align-items: center;
+    gap: 4.8rem;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    width: 100%;
+  }
+  .navbar-collapse ul {
+    gap: 5.8rem;
+    align-items: center;
+  }
+
+  .navbar-collapse ul li a {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .navbar-expand-sm {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 9.9rem;
+    height: 100dvh;
+    padding-top: 8rem;
+    padding-inline: 1.6rem;
+    flex-direction: column;
+    gap: 4.8rem;
+    flex-shrink: 0;
+    background: var(--bs-red, #ea1d2c);
+    box-shadow: 4px 0px 4px 5px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.row {
+  width: 100%;
+  padding-left: 12rem;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  min-width: 32.8rem;
+  max-width: 67.6rem;
+  padding: 1rem 0rem 2rem 0rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  flex: 1 0 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .cards-container {
@@ -45,9 +162,9 @@ body {
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 1.0rem;
-  box-shadow: .0rem .4rem .6rem rgba(0, 0, 0, 0.1);
+  background-color: var(--bs-white);
+  border-radius: 1rem;
+  box-shadow: 0rem 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -62,18 +179,18 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 400; /* Aumentado para deixar o texto mais espesso */
-  line-height: .28rem;
+  line-height: 0.28rem;
   word-wrap: break-word;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: var(--bs-white);
+  border-color: var(--bs-white);
 }
 
 .saldo-card .card-header {
-  color: black; /* Cor para o header do card Saldo */
+  color: var(--bs-black); /* Cor para o header do card Saldo */
 }
 
 .faturamento-card .card-header {
-  color: #5d99f4; /* Cor para o header do card Faturamento */
+  color: var(--bs-info, #5d99f4); /* Cor para o header do card Faturamento */
 }
 
 .entrada-card .card-header {
@@ -102,14 +219,14 @@ body {
   align-items: baseline;
   justify-content: space-between;
   font-size: 1.5rem;
-  margin: 1.0rem;
-  padding-left: .8rem;
+  margin: 1rem;
+  padding-left: 0.8rem;
 }
 
 .card-content .currency-saldo {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #000;
   font-weight: 700;
 }
@@ -117,7 +234,7 @@ body {
 .card-content .currency-faturamento {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #5d99f4;
   font-weight: 700;
 }
@@ -125,7 +242,7 @@ body {
 .card-content .currency-entrada {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #128900;
   font-weight: 700;
 }
@@ -133,7 +250,7 @@ body {
 .card-content .currency-saida {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #890019;
   font-weight: 700;
 }
@@ -168,4 +285,106 @@ body {
 
 .card:nth-child(4) .amount {
   color: #890019;
+}
+
+/* Container principal dos cards */
+.custom-row {
+  width: 50%; /* Ajuste conforme necessário */
+}
+
+/* Estilos para os cards */
+.custom-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-card {
+  display: flex;
+  width: 137px;
+  height: 158px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--Colors-Style-Ifood-Nero, #FFF);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#chart {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  border-radius: 1.1rem;
+  background: var(--bs-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+#chart-header div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#chart-header p {
+  color: var(--bs-black, #000,);
+
+  font-size: 1.9852rem;
+  line-height: 2.8rem;
+}
+
+#chart-body {
+  width: 100%;
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  color: var(--bs-black, #000);
+}
+
+#additional-card {
+  display: flex;
+  height: 15.8rem;
+  padding: 1.2rem 3.2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: var(--Colors-Style-Ifood-Nero, #fff);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+#additional-card p {
+  color: var(--bs-black, #000);
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.space {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #efefef;
 }
