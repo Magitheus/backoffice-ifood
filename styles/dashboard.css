@@ -39,7 +39,7 @@ p {
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 
@@ -385,4 +385,41 @@ i {
   align-items: center;
   gap: 1rem;
   background-color: #efefef;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.icon {
+  width: 35px;
+  margin-right: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.balance {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.prediction {
+  margin-left: auto;
+  font-style: italic;
 }
