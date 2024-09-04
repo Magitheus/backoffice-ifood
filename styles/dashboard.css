@@ -6,7 +6,8 @@
 
 :root {
   --forms: 47.3rem;
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
+  /* 1rem = 10px */
 }
 
 /* TEMA */
@@ -105,6 +106,7 @@ a.nav-link p {
     width: fit-content;
     width: 100%;
   }
+
   .navbar-collapse ul {
     gap: 5.8rem;
     align-items: center;
@@ -158,7 +160,8 @@ a.nav-link p {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
   /* padding: 20px; */
-  align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+  align-items: stretch;
+  /* Garante que todos os cards tenham a mesma altura */
 }
 
 .card {
@@ -169,7 +172,8 @@ a.nav-link p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1; /* Faz com que os cards cresçam igualmente */
+  flex: 1;
+  /* Faz com que os cards cresçam igualmente */
 }
 
 .card-header {
@@ -178,7 +182,8 @@ a.nav-link p {
   align-items: center;
   font-family: "Inter", sans-serif;
   font-size: 2rem;
-  font-weight: 400; /* Aumentado para deixar o texto mais espesso */
+  font-weight: 400;
+  /* Aumentado para deixar o texto mais espesso */
   line-height: 0.28rem;
   word-wrap: break-word;
   background-color: var(--bs-white);
@@ -186,19 +191,23 @@ a.nav-link p {
 }
 
 .saldo-card .card-header {
-  color: var(--bs-black); /* Cor para o header do card Saldo */
+  color: var(--bs-black);
+  /* Cor para o header do card Saldo */
 }
 
 .faturamento-card .card-header {
-  color: var(--bs-info, #5d99f4); /* Cor para o header do card Faturamento */
+  color: var(--bs-info, #5d99f4);
+  /* Cor para o header do card Faturamento */
 }
 
 .entrada-card .card-header {
-  color: #128900; /* Cor para o header do card Entrada */
+  color: #128900;
+  /* Cor para o header do card Entrada */
 }
 
 .saida-card .card-header {
-  color: #890019; /* Cor para o header do card Saída */
+  color: #890019;
+  /* Cor para o header do card Saída */
 }
 
 .card-header .info-icon {
@@ -340,7 +349,7 @@ a.nav-link p {
 }
 
 #chart-header p {
-  color: var(--bs-black, #000,);
+  color: var(--bs-black, #000, );
 
   font-size: 1.9852rem;
   line-height: 2.8rem;
@@ -422,4 +431,115 @@ i {
 .prediction {
   margin-left: auto;
   font-style: italic;
+}
+
+.notificacoes {
+  display: flex;
+  height: 158px;
+  padding: 12px 32px;
+  border-radius: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8px;
+  align-self: stretch;
+  background: var(--Colors-Style-Ifood-Nero, #FFF);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.notificacoes h1 {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 18.906px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.notificacoes p {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16.453px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.conteiner-loja {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+
+.logo-section {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 356px;
+}
+
+.logo-text {
+  color: black;
+  font-size: 19.85px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.balance-section {
+  width: 240px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  display: inline-flex;
+}
+
+.balance-row {
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.label {
+  color: #3E3E3E;
+  font-size: 19.85px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.currency,
+.amount {
+  color: black;
+  font-size: 19.85px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.loja-1-img {
+  border-radius: 356px;
+}
+
+.loja-2-img {
+  border-radius: 250px;
+}
+
+.loja-2-section {
+  height: 92px;
+  justify-content: space-between;
 }

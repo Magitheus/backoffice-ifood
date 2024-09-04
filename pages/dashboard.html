@@ -65,7 +65,7 @@
         >
       </div>
     </nav>
-    <div class="row d-flex justify-content-start gap-3 mt-5">Caio</div>
+    <div class="row d-flex justify-content-start gap-3 mt-5">Joao</div>
     <div class="row d-flex justify-content-evenly gap-3">
       <div class="col bg-secondary">
         <div class="space">
@@ -90,45 +90,7 @@
           </div>
         </div>
         <div class="space">
-          <div class="container">
-            <div class="title">
-              Suas contas >
-              <i class="fas fa-info-circle"></i>
-            </div>
-
-            <div class="account">
-              <div class="icon icon-itau"><img src="/assets/itau.svg" alt="icon-itau"></div>
-              <div class="name">Itaú</div>
-              <div class="balance">R$ 11.907,79</div>
-            </div>
-
-            <div class="account">
-              <div class="prediction">Previsão</div>
-              <div class="prediction">R$ 12.003,87</div>
-            </div>
-
-            <div class="account">
-              <div class="icon icon-nubank"><img src="/assets/nubank (1).svg" alt="icon-nubank"></div>
-              <div class="name">Nubank</div>
-              <div class="balance">R$ 7.953,00</div>
-            </div>
-
-            <div class="account">
-              <div class="prediction">Previsão</div>
-              <div class="prediction">R$ 9.632,21</div>
-            </div>
-
-            <div class="account">
-              <div class="icon ifood-wallet"><img id="1" src="/assets/carteira Ifood.svg" alt="icon-ifood"></div>
-              <div class="name">Carteira Ifood</div>
-              <div class="balance">R$ 7.000,00</div>
-            </div>
-
-            <div class="account">
-              <div class="prediction">Previsão</div>
-              <div class="prediction">R$ 9.632,21</div>
-            </div>
-          </div>
+          <p>João - Contas</p>
         </div>
         <div id="additional-card">
           <p>Deseja adicionar um novo card ?</p>
@@ -151,35 +113,35 @@
             </div>
           </div>
 
-          <div class="card faturamento-card">
-            <div class="card-header">
-              <span>Faturamento</span>
-              <span class="info-icon">i</span>
-            </div>
-            <div class="card-content">
-              <span class="currency-faturamento">R$</span>
-              <span class="amount">541,22</span>
-            </div>
-            <div class="card-footer">
-              <span>Médias anteriores</span>
-              <span class="prediction">R$ 602,41</span>
-            </div>
+        <div class="card faturamento-card">
+          <div class="card-header">
+            <span>Faturamento</span>
+            <span class="info-icon">i</span>
           </div>
+          <div class="card-content">
+            <span class="currency-faturamento">R$</span>
+            <span class="amount">541,22</span>
+          </div>
+          <div class="card-footer">
+            <span>Médias anteriores</span>
+            <span class="prediction">R$ 602,41</span>
+          </div>
+        </div>
 
-          <div class="card entrada-card">
-            <div class="card-header">
-              <span>Entrada</span>
-              <span class="info-icon">i</span>
-            </div>
-            <div class="card-content">
-              <span class="currency-entrada">R$</span>
-              <span class="amount">8.212,36</span>
-            </div>
-            <div class="card-footer">
-              <span>Previsão</span>
-              <span class="prediction">R$ 28.212,36</span>
-            </div>
+        <div class="card entrada-card">
+          <div class="card-header">
+            <span>Entrada</span>
+            <span class="info-icon">i</span>
           </div>
+          <div class="card-content">
+            <span class="currency-entrada">R$</span>
+            <span class="amount">8.212,36</span>
+          </div>
+          <div class="card-footer">
+            <span>Previsão</span>
+            <span class="prediction">R$ 28.212,36</span>
+          </div>
+        </div>
 
           <a href="./expense.html" class="card saida-card">
             <div class="card-header">
@@ -208,40 +170,40 @@
             <canvas id="myChart"></canvas>
           </div>
         </div>
+      </div>      
 </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script>
-      const ctx = document.getElementById("myChart");
+  <script>
+    const ctx = document.getElementById("myChart");
 
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
-          datasets: [
-            {
-              label: "Saldo",
-              data: [81, 56, 55, 40],
-              fill: false,
-              borderColor: "#3483F9",
-              tension: 0.1,
-            },
-            {
-              label: "Despesa",
-              data: [65, 59, 80, 81],
-              fill: false,
-              borderColor: "#C20F0F",
-              tension: 0.5,
-            },
-          ],
-        },
-      });
-    </script>
-  </body>
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+        datasets: [
+          {
+            label: "Saldo",
+            data: [81, 56, 55, 40],
+            fill: false,
+            borderColor: "#3483F9",
+            tension: 0.1,
+          },
+          {
+            label: "Despesa",
+            data: [65, 59, 80, 81],
+            fill: false,
+            borderColor: "#C20F0F",
+            tension: 0.5,
+          },
+        ],
+      },
+    });
+  </script>
+</body>
+
 </html>
