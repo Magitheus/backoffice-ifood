@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.ifood-43-1-icon {
+  position: absolute;
+  top: 100px;
+  left: 249px;
+  width: 120px;
+  height: 63.4px;
+  object-fit: cover;
+}
+
+.cda-7f06-40d7-b0bd-8d76597617b-icon {
+  position: absolute;
+  top: 40px;
+  left: 612px;
+  border-radius: 30px;
+  width: 921px;
+  height: 892px;
+  object-fit: cover;
+}
+
+.cadastro-child {
+  position: absolute;
+  top: 390px;
+  left: 63px;
+  border-radius: 7px;
+  background-color: #fff;
+  border: 1px solid #cdcccc;
+  box-sizing: border-box;
+  width: 492px;
+  height: 48px;
+}
+
+.a-oportunidade-que {
+  position: absolute;
+  top: 494px;
+  left: 658px;
+  font-size: 64px;
+  display: inline-block;
+  color: #fff;
+  width: 782px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.faa-seu-cadastro {
+  position: absolute;
+  top: 237px;
+  left: 67px;
+  font-size: 64px;
+}
+
+.label {
+  position: absolute;
+  font-size: 16px;
+  color: #333;
+}
+
+.nome {
+  top: 355px;
+  left: 63px;
+}
+
+.e-mail {
+  top: 482px;
+  left: 63px;
+}
+
+.celular-com-ddd {
+  top: 609px;
+  left: 63px;
+}
+
+.input {
+  position: absolute;
+  border-radius: 7px;
+  background-color: #fff;
+  border: 1px solid #cdcccc;
+  box-sizing: border-box;
+  width: 492px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+#nome {
+  top: 390px;
+  left: 63px;
+}
+
+#email {
+  top: 517px;
+  left: 63px;
+}
+
+#telefone {
+  top: 644px;
+  left: 63px;
+}
+
+.button-container {
+  position: absolute;
+  top: 771px;
+  left: 63px;
+  display: flex;
+  gap: 16px; /* Espaço entre os botões */
+}
+
+.button {
+  border-radius: 5px;
+  width: 232px;
+  height: 46px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastrar {
+  background-color: #ea1d2c;
+}
+
+.j-sou-parceiro {
+  background-color: #fff;
+  border: 1px solid #ea1d2c;
+  color: #ea1d2c;
+}
+
+.line-icon {
+  position: absolute;
+  top: 220px;
+  left: 63px;
+  width: 492px;
+  height: 4px;
+  object-fit: contain;
+}
+
+.cadastro {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 22px;
+  color: #333;
+  font-family: 'Inria Sans', sans-serif;
+}
