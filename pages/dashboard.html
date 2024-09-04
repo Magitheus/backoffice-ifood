@@ -68,8 +68,11 @@
     <div class="row d-flex justify-content-start gap-3 mt-5">Joao</div>
     <div class="row d-flex justify-content-evenly gap-3">
       <div class="col bg-secondary">
-        <div class="space">
-          <p>Caio - Notificacao</p>
+        <div class="notificacoes">
+          <h1>Notificações</h1>
+          <p>Despesas vencidas/</p>
+          <p>Aumento de Gastos/</p>
+          <p>Promoções do iFood Shop/</p>
         </div>
         <div class="col-12 d-flex justify-content-between custom-col">
           <div class="custom-card incluir-receita" onclick="window.location.href='url-incluir-receita.html';">
@@ -89,8 +92,44 @@
             <span>Categorias</span>
           </div>
         </div>
-        <div class="space">
-          <p>João - Contas</p>
+        <div class="container">
+          <div class="title">
+            Suas contas >
+            <i class="fas fa-info-circle"></i>
+          </div>
+
+          <div class="account">
+            <div class="icon icon-itau"><img src="/assets/itau.svg" alt="icon-itau"></div>
+            <div class="name">Itaú</div>
+            <div class="balance">R$ 11.907,79</div>
+          </div>
+
+          <div class="account">
+            <div class="prediction">Previsão</div>
+            <div class="prediction">R$ 12.003,87</div>
+          </div>
+
+          <div class="account">
+            <div class="icon icon-nubank"><img src="/assets/nubank (1).svg" alt="icon-nubank"></div>
+            <div class="name">Nubank</div>
+            <div class="balance">R$ 7.953,00</div>
+          </div>
+
+          <div class="account">
+            <div class="prediction">Previsão</div>
+            <div class="prediction">R$ 9.632,21</div>
+          </div>
+
+          <div class="account">
+            <div class="icon ifood-wallet"><img id="1" src="/assets/carteira Ifood.svg" alt="icon-ifood"></div>
+            <div class="name">Carteira Ifood</div>
+            <div class="balance">R$ 7.000,00</div>
+          </div>
+
+          <div class="account">
+            <div class="prediction">Previsão</div>
+            <div class="prediction">R$ 9.632,21</div>
+          </div>
         </div>
         <div id="additional-card">
           <p>Deseja adicionar um novo card ?</p>
@@ -168,6 +207,57 @@
           </div>
           <div id="chart-body">
             <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div id="chart">
+          <div id="chart-header">
+            <div>
+              <p>Vendas nas lojas</p>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+            <i class="bi bi-info-circle-fill"></i>
+          </div>
+  
+  
+          <div class="conteiner-loja loja-1">
+            <div class="logo-section">
+              <img class="logo-img loja-1-img" src="/assets\loja1.png" />
+              <div class="logo-text">Hamburgueria</div>
+            </div>
+            <div class="balance-section loja-1-section">
+              <div class="balance-row">
+                <div class="label">Balancete</div>
+                <div><span class="currency">R$ </span><span class="amount">1.132,21</span></div>
+              </div>
+              <div class="balance-row">
+                <div class="label">Vendas</div>
+                <div><span class="currency">R$ </span><span class="amount">3.278,40</span></div>
+              </div>
+              <div class="balance-row">
+                <div class="label">Custos</div>
+                <div><span class="currency">R$ </span><span class="amount">2.146,19</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner-loja loja-2">
+            <div class="logo-section">
+              <img class="logo-img loja-2-img" src="/assets\loja2.png" />
+              <div class="logo-text">Restaurante</div>
+            </div>
+            <div class="balance-section loja-2-section">
+              <div class="balance-row">
+                <div class="label">Balancete</div>
+                <div><span class="currency">R$ </span><span class="amount">1.132,21</span></div>
+              </div>
+              <div class="balance-row">
+                <div class="label">Vendas</div>
+                <div><span class="currency">R$ </span><span class="amount">3.278,40</span></div>
+              </div>
+              <div class="balance-row">
+                <div class="label">Custos</div>
+                <div><span class="currency">R$ </span><span class="amount">2.146,19</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>      
