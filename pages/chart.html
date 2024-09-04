@@ -78,72 +78,114 @@
       </div>
     </div>
 
-    <div id="expense-body" class="row d-flex">
-      <div class="collum table-responsive">
-        <table class="table table-hover table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+    <div id="expense-body" class="row d-flex chart mt-5">
+      <div id="control-month">
+        <button>
+          <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+        <button>
+          <p>Abril</p>
+        </button>
+        <button>
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </div>
+      <div class="col expense-category">
+        <h2>Despesas por Categoria</h2>
+        <div id="expense-category-body" class="d-flex justify-content-between">
+          <div>
+            <details>
+              <summary>Entregas<span>R$ 266,83</span></summary>
+              <p>Emprestimo</p>
+              <p>Financiamento</p>
+              <button>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <g clip-path="url(#clip0_324_3885)">
+                    <path d="M12.5 0C15.8152 0 18.9946 1.31696 21.3388 3.66117C23.683 6.00537 25 9.18479 25 12.5C25 15.8152 23.683 18.9946 21.3388 21.3388C18.9946 23.683 15.8152 25 12.5 25C9.18479 25 6.00537 23.683 3.66117 21.3388C1.31696 18.9946 0 15.8152 0 12.5C0 9.18479 1.31696 6.00537 3.66117 3.66117C6.00537 1.31696 9.18479 0 12.5 0ZM14.1594 6.7375C14.1594 6.3231 13.9948 5.92567 13.7017 5.63265C13.4087 5.33962 13.0113 5.175 12.5969 5.175C12.1825 5.175 11.785 5.33962 11.492 5.63265C11.199 5.92567 11.0344 6.3231 11.0344 6.7375V11.0344H6.7375C6.3231 11.0344 5.92567 11.199 5.63265 11.492C5.33962 11.785 5.175 12.1825 5.175 12.5969C5.175 13.0113 5.33962 13.4087 5.63265 13.7017C5.92567 13.9948 6.3231 14.1594 6.7375 14.1594H11.0344V18.4563C11.0344 18.8707 11.199 19.2681 11.492 19.5611C11.785 19.8541 12.1825 20.0188 12.5969 20.0188C13.0113 20.0188 13.4087 19.8541 13.7017 19.5611C13.9948 19.2681 14.1594 18.8707 14.1594 18.4563V14.1594H18.4563C18.8707 14.1594 19.2681 13.9948 19.5611 13.7017C19.8541 13.4087 20.0188 13.0113 20.0188 12.5969C20.0188 12.1825 19.8541 11.785 19.5611 11.492C19.2681 11.199 18.8707 11.0344 18.4563 11.0344H14.1594V6.7375Z" fill="#EA1D2C"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_324_3885">
+                      <rect width="25" height="25" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </details>
+            <details>
+              <summary>Funcionário<span>R$ 4.019,00</span></summary>
+              <p>Auxílios</p>
+              <p>Encargos</p>
+              <p>Encargos</p>
+              <p>Férias</p>
+              <p>Hora Extra</p>
+              <p>Salário</p>
+              <button>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <g clip-path="url(#clip0_324_3885)">
+                    <path d="M12.5 0C15.8152 0 18.9946 1.31696 21.3388 3.66117C23.683 6.00537 25 9.18479 25 12.5C25 15.8152 23.683 18.9946 21.3388 21.3388C18.9946 23.683 15.8152 25 12.5 25C9.18479 25 6.00537 23.683 3.66117 21.3388C1.31696 18.9946 0 15.8152 0 12.5C0 9.18479 1.31696 6.00537 3.66117 3.66117C6.00537 1.31696 9.18479 0 12.5 0ZM14.1594 6.7375C14.1594 6.3231 13.9948 5.92567 13.7017 5.63265C13.4087 5.33962 13.0113 5.175 12.5969 5.175C12.1825 5.175 11.785 5.33962 11.492 5.63265C11.199 5.92567 11.0344 6.3231 11.0344 6.7375V11.0344H6.7375C6.3231 11.0344 5.92567 11.199 5.63265 11.492C5.33962 11.785 5.175 12.1825 5.175 12.5969C5.175 13.0113 5.33962 13.4087 5.63265 13.7017C5.92567 13.9948 6.3231 14.1594 6.7375 14.1594H11.0344V18.4563C11.0344 18.8707 11.199 19.2681 11.492 19.5611C11.785 19.8541 12.1825 20.0188 12.5969 20.0188C13.0113 20.0188 13.4087 19.8541 13.7017 19.5611C13.9948 19.2681 14.1594 18.8707 14.1594 18.4563V14.1594H18.4563C18.8707 14.1594 19.2681 13.9948 19.5611 13.7017C19.8541 13.4087 20.0188 13.0113 20.0188 12.5969C20.0188 12.1825 19.8541 11.785 19.5611 11.492C19.2681 11.199 18.8707 11.0344 18.4563 11.0344H14.1594V6.7375Z" fill="#EA1D2C"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_324_3885">
+                      <rect width="25" height="25" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </details>
+          </div>
+          <div><canvas id="myChart"></canvas></div>
+          <div>
+            <details>
+              <summary>Entregas<span>R$ 266,83</span></summary>
+              <p>Emprestimo</p>
+              <p>Financiamento</p>
+              <button>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <g clip-path="url(#clip0_324_3885)">
+                    <path d="M12.5 0C15.8152 0 18.9946 1.31696 21.3388 3.66117C23.683 6.00537 25 9.18479 25 12.5C25 15.8152 23.683 18.9946 21.3388 21.3388C18.9946 23.683 15.8152 25 12.5 25C9.18479 25 6.00537 23.683 3.66117 21.3388C1.31696 18.9946 0 15.8152 0 12.5C0 9.18479 1.31696 6.00537 3.66117 3.66117C6.00537 1.31696 9.18479 0 12.5 0ZM14.1594 6.7375C14.1594 6.3231 13.9948 5.92567 13.7017 5.63265C13.4087 5.33962 13.0113 5.175 12.5969 5.175C12.1825 5.175 11.785 5.33962 11.492 5.63265C11.199 5.92567 11.0344 6.3231 11.0344 6.7375V11.0344H6.7375C6.3231 11.0344 5.92567 11.199 5.63265 11.492C5.33962 11.785 5.175 12.1825 5.175 12.5969C5.175 13.0113 5.33962 13.4087 5.63265 13.7017C5.92567 13.9948 6.3231 14.1594 6.7375 14.1594H11.0344V18.4563C11.0344 18.8707 11.199 19.2681 11.492 19.5611C11.785 19.8541 12.1825 20.0188 12.5969 20.0188C13.0113 20.0188 13.4087 19.8541 13.7017 19.5611C13.9948 19.2681 14.1594 18.8707 14.1594 18.4563V14.1594H18.4563C18.8707 14.1594 19.2681 13.9948 19.5611 13.7017C19.8541 13.4087 20.0188 13.0113 20.0188 12.5969C20.0188 12.1825 19.8541 11.785 19.5611 11.492C19.2681 11.199 18.8707 11.0344 18.4563 11.0344H14.1594V6.7375Z" fill="#EA1D2C"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_324_3885">
+                      <rect width="25" height="25" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </details>
+            <details>
+              <summary>Funcionário<span>R$ 4.019,00</span></summary>
+              <p>Auxílios</p>
+              <p>Encargos</p>
+              <p>Encargos</p>
+              <p>Férias</p>
+              <p>Hora Extra</p>
+              <p>Salário</p>
+              <button>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <g clip-path="url(#clip0_324_3885)">
+                    <path d="M12.5 0C15.8152 0 18.9946 1.31696 21.3388 3.66117C23.683 6.00537 25 9.18479 25 12.5C25 15.8152 23.683 18.9946 21.3388 21.3388C18.9946 23.683 15.8152 25 12.5 25C9.18479 25 6.00537 23.683 3.66117 21.3388C1.31696 18.9946 0 15.8152 0 12.5C0 9.18479 1.31696 6.00537 3.66117 3.66117C6.00537 1.31696 9.18479 0 12.5 0ZM14.1594 6.7375C14.1594 6.3231 13.9948 5.92567 13.7017 5.63265C13.4087 5.33962 13.0113 5.175 12.5969 5.175C12.1825 5.175 11.785 5.33962 11.492 5.63265C11.199 5.92567 11.0344 6.3231 11.0344 6.7375V11.0344H6.7375C6.3231 11.0344 5.92567 11.199 5.63265 11.492C5.33962 11.785 5.175 12.1825 5.175 12.5969C5.175 13.0113 5.33962 13.4087 5.63265 13.7017C5.92567 13.9948 6.3231 14.1594 6.7375 14.1594H11.0344V18.4563C11.0344 18.8707 11.199 19.2681 11.492 19.5611C11.785 19.8541 12.1825 20.0188 12.5969 20.0188C13.0113 20.0188 13.4087 19.8541 13.7017 19.5611C13.9948 19.2681 14.1594 18.8707 14.1594 18.4563V14.1594H18.4563C18.8707 14.1594 19.2681 13.9948 19.5611 13.7017C19.8541 13.4087 20.0188 13.0113 20.0188 12.5969C20.0188 12.1825 19.8541 11.785 19.5611 11.492C19.2681 11.199 18.8707 11.0344 18.4563 11.0344H14.1594V6.7375Z" fill="#EA1D2C"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_324_3885">
+                      <rect width="25" height="25" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 expense-category d-flex">
+        <h2>Balancete</h2>
+        <div id="expense-category-body" class="d-flex justify-content-between">
+        <div><canvas id="myChartt"></canvas></div>
+        <div><h1>João</h1></div>
+      </div>
       </div>
     </div>
 
@@ -152,5 +194,57 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+      const ctxx = document.getElementById("myChartt");
+
+      new Chart(ctxx, {
+        type: "line",
+        data: {
+          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          datasets: [
+            {
+              label: "",
+              data: [81, 56, 55, 40],
+              fill: false,
+              borderColor: "#3483F9",
+              tension: 0.1,
+            },
+            {
+              label: "Despesa",
+              data: [65, 59, 80, 81],
+              fill: false,
+              borderColor: "#C20F0F",
+              tension: 0.5,
+            },
+          ],
+        },
+      });
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          datasets: [
+            {
+              label: "",
+              data: [81, 56, 55, 40],
+              fill: false,
+              borderColor: "#3483F9",
+              tension: 0.1,
+            },
+            {
+              label: "Despesa",
+              data: [65, 59, 80, 81],
+              fill: false,
+              borderColor: "#C20F0F",
+              tension: 0.5,
+            },
+          ],
+        },
+      });
+    </script>
   </body>
 </html>
