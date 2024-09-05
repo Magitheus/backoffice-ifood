@@ -67,133 +67,150 @@
     </nav>
     <div class="row d-flex justify-content-start gap-3 mt-5">Joao</div>
     <div class="row d-flex justify-content-evenly gap-3">
-      <div class="col bg-secondary">
+      <div class="col">
         <div class="notificacoes">
           <h1>Notificações</h1>
           <p>Despesas vencidas/</p>
           <p>Aumento de Gastos/</p>
           <p>Promoções do iFood Shop/</p>
         </div>
-        <div class="col-12 d-flex justify-content-between custom-col">
-          <div class="custom-card incluir-receita" onclick="window.location.href='url-incluir-receita.html';">
-            <img src="../assets/incluir-receita-icon.svg" alt="Incluir Receita">
+        <div
+          class="col-12 d-flex justify-content-between"
+          style="flex-wrap: wrap; gap: 1rem"
+        >
+          <div
+            class="custom-card"
+            onclick="window.location.href='url-incluir-receita.html';"
+          >
+            <img
+              src="../assets/incluir-receita-icon.svg"
+              alt="Incluir Receita"
+            />
             <span>Incluir Receita</span>
           </div>
-          <div class="custom-card incluir-despesa" onclick="window.location.href='url-incluir-despesa.html';">
-            <img src="../assets/incluir-despesa-icon.svg" alt="Incluir Despesa">
+          <div
+            class="custom-card"
+            onclick="window.location.href='url-incluir-despesa.html';"
+          >
+            <img
+              src="../assets/incluir-despesa-icon.svg"
+              alt="Incluir Despesa"
+            />
             <span>Incluir Despesa</span>
           </div>
-          <div class="custom-card incluir-transacao" onclick="window.location.href='url-incluir-transacao.html';">
-            <img src="../assets/incluir-transacao-icon.svg" alt="Incluir Transação">
+          <div
+            class="custom-card"
+            onclick="window.location.href='url-incluir-transacao.html';"
+          >
+            <img
+              src="../assets/incluir-transacao-icon.svg"
+              alt="Incluir Transação"
+            />
             <span>Incluir Transação</span>
           </div>
-          <div class="custom-card categorias" onclick="window.location.href='url-categorias.html';">
-            <img src="../assets/categorias-icon.svg" alt="Categorias">
+          <div
+            class="custom-card"
+            onclick="window.location.href='url-categorias.html';"
+          >
+            <img src="../assets/categorias-icon.svg" alt="Categorias" />
             <span>Categorias</span>
           </div>
         </div>
-        <div class="container">
-          <div class="title">
-            Suas contas >
-            <i class="fas fa-info-circle"></i>
-          </div>
-
+        <div class="container-account">
+          <p class="title">Suas contas <i class="bi bi-chevron-right"></i></p>
           <div class="account">
-            <div class="icon icon-itau"><img src="/assets/itau.svg" alt="icon-itau"></div>
+            <img class="icon" src="/assets/itau.svg" alt="icon-itau" />
             <div class="name">Itaú</div>
             <div class="balance">R$ 11.907,79</div>
           </div>
-
-          <div class="account">
-            <div class="prediction">Previsão</div>
-            <div class="prediction">R$ 12.003,87</div>
+          <div class="card-content">
+            <div>Previsão</div>
+            <div>R$ 12.003,87</div>
           </div>
-
           <div class="account">
-            <div class="icon icon-nubank"><img src="/assets/nubank (1).svg" alt="icon-nubank"></div>
+            <img class="icon" src="/assets/nubank (1).svg" alt="icon-nubank" />
             <div class="name">Nubank</div>
             <div class="balance">R$ 7.953,00</div>
           </div>
-
-          <div class="account">
-            <div class="prediction">Previsão</div>
-            <div class="prediction">R$ 9.632,21</div>
+          <div class="card-content">
+            <div>Previsão</div>
+            <div>R$ 9.632,21</div>
           </div>
-
           <div class="account">
-            <div class="icon ifood-wallet"><img id="1" src="/assets/carteira Ifood.svg" alt="icon-ifood"></div>
+            <img
+              class="icon"
+              id="1"
+              src="/assets/carteira Ifood.svg"
+              alt="icon-ifood"
+            />
             <div class="name">Carteira Ifood</div>
             <div class="balance">R$ 7.000,00</div>
           </div>
-
-          <div class="account">
-            <div class="prediction">Previsão</div>
-            <div class="prediction">R$ 9.632,21</div>
+          <div class="card-content">
+            <div>Previsão</div>
+            <div>R$ 9.632,21</div>
           </div>
         </div>
         <div id="additional-card">
           <p>Deseja adicionar um novo card ?</p>
         </div>
       </div>
-      <div class="col bg-secondary">
+      <div class="col">
         <div class="cards-container">
-          <div class="card saldo-card">
+          <a href="./transactions.html" class="card">
             <div class="card-header">
-              <span>Saldo</span>
-              <span class="info-icon">i</span>
+              <span>Saldo <i class="bi bi-chevron-right"></i> </span>
+              <i class="bi bi-info-circle-fill"></i>
             </div>
             <div class="card-content">
-              <span class="currency-saldo">R$</span>
-              <span class="amount">1.854,89</span>
-            </div>
-            <div class="card-footer">
-              <span>Previsão</span>
-              <span class="prediction">R$ 22.048,90</span>
-            </div>
-          </div>
-
-        <div class="card faturamento-card">
-          <div class="card-header">
-            <span>Faturamento</span>
-            <span class="info-icon">i</span>
-          </div>
-          <div class="card-content">
-            <span class="currency-faturamento">R$</span>
-            <span class="amount">541,22</span>
-          </div>
-          <div class="card-footer">
-            <span>Médias anteriores</span>
-            <span class="prediction">R$ 602,41</span>
-          </div>
-        </div>
-
-        <div class="card entrada-card">
-          <div class="card-header">
-            <span>Entrada</span>
-            <span class="info-icon">i</span>
-          </div>
-          <div class="card-content">
-            <span class="currency-entrada">R$</span>
-            <span class="amount">8.212,36</span>
-          </div>
-          <div class="card-footer">
-            <span>Previsão</span>
-            <span class="prediction">R$ 28.212,36</span>
-          </div>
-        </div>
-
-          <a href="./expense.html" class="card saida-card">
-            <div class="card-header">
-              <span>Saída</span>
-              <span class="info-icon">i</span>
+              <span>R$</span>
+              <span>1.854,89</span>
             </div>
             <div class="card-content">
-              <span class="currency-saida">R$</span>
-              <span class="amount">6.357,47</span>
-            </div>
-            <div class="card-footer">
               <span>Previsão</span>
-              <span class="prediction">R$ 6.417,00</span>
+              <span>R$ 22.048,90</span>
+            </div>
+          </a>
+          <div class="card">
+            <div class="card-header">
+              <span>Faturamento <i class="bi bi-chevron-right"></i></span>
+              <i class="bi bi-info-circle-fill"></i>
+            </div>
+            <div class="card-content">
+              <span class="faturamento-card">R$</span>
+              <span class="faturamento-card">541,22</span>
+            </div>
+            <div class="card-content">
+              <span>Médias anteriores</span>
+              <span>R$ 602,41</span>
+            </div>
+          </div>
+          <a href="./income.html" class="card">
+            <div class="card-header">
+              <span>Entrada <i class="bi bi-chevron-right"></i></span>
+              <i class="bi bi-info-circle-fill"></i>
+            </div>
+            <div class="card-content">
+              <span class="entrada-card">R$</span>
+              <span class="entrada-card">8.212,36</span>
+            </div>
+            <div class="card-content">
+              <span>Previsão</span>
+              <span>R$ 28.212,36</span>
+            </div>
+          </a>
+          <a href="./expense.html" class="card">
+            <div class="card-header">
+              <span>Saída <i class="bi bi-chevron-right"></i></span>
+              <i class="bi bi-info-circle-fill"></i>
+            </div>
+            <div class="card-content">
+              <span class="saida-card">R$</span>
+              <span class="saida-card">6.357,47</span>
+            </div>
+            <div class="card-content">
+              <span>Previsão</span>
+              <span class="">R$ 6.417,00</span>
             </div>
           </a>
         </div>
@@ -217,83 +234,82 @@
             </div>
             <i class="bi bi-info-circle-fill"></i>
           </div>
-  
-  
-          <div class="conteiner-loja loja-1">
+
+          <div class="conteiner-loja">
             <div class="logo-section">
-              <img class="logo-img loja-1-img" src="/assets\loja1.png" />
-              <div class="logo-text">Hamburgueria</div>
+              <img src="/assets\loja1.png" />
+              <p>Hamburgueria</p>
             </div>
-            <div class="balance-section loja-1-section">
+            <div class="balance-section">
               <div class="balance-row">
-                <div class="label">Balancete</div>
-                <div><span class="currency">R$ </span><span class="amount">1.132,21</span></div>
+                <p class="label">Balancete</p>
+                <div><span>R$ </span><span>1.132,21</span></div>
               </div>
               <div class="balance-row">
-                <div class="label">Vendas</div>
-                <div><span class="currency">R$ </span><span class="amount">3.278,40</span></div>
+                <p>Vendas</p>
+                <div><span>R$ </span><span>3.278,40</span></div>
               </div>
               <div class="balance-row">
                 <div class="label">Custos</div>
-                <div><span class="currency">R$ </span><span class="amount">2.146,19</span></div>
+                <div><span>R$ </span><span>2.146,19</span></div>
               </div>
             </div>
           </div>
-          <div class="conteiner-loja loja-2">
+          <div class="conteiner-loja">
             <div class="logo-section">
-              <img class="logo-img loja-2-img" src="/assets\loja2.png" />
-              <div class="logo-text">Restaurante</div>
+              <img src="/assets\loja2.png" />
+              <p>Restaurante</p>
             </div>
-            <div class="balance-section loja-2-section">
+            <div class="balance-section">
               <div class="balance-row">
                 <div class="label">Balancete</div>
-                <div><span class="currency">R$ </span><span class="amount">1.132,21</span></div>
+                <div><span>R$ </span><span>1.132,21</span></div>
               </div>
               <div class="balance-row">
                 <div class="label">Vendas</div>
-                <div><span class="currency">R$ </span><span class="amount">3.278,40</span></div>
+                <div><span>R$ </span><span>3.278,40</span></div>
               </div>
               <div class="balance-row">
                 <div class="label">Custos</div>
-                <div><span class="currency">R$ </span><span class="amount">2.146,19</span></div>
+                <div><span>R$ </span><span>2.146,19</span></div>
               </div>
             </div>
           </div>
         </div>
-      </div>      
-</div>
+      </div>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
 
-  <script>
-    const ctx = document.getElementById("myChart");
-
-    new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
-        datasets: [
-          {
-            label: "Saldo",
-            data: [81, 56, 55, 40],
-            fill: false,
-            borderColor: "#3483F9",
-            tension: 0.1,
-          },
-          {
-            label: "Despesa",
-            data: [65, 59, 80, 81],
-            fill: false,
-            borderColor: "#C20F0F",
-            tension: 0.5,
-          },
-        ],
-      },
-    });
-  </script>
-</body>
-
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          datasets: [
+            {
+              label: "Saldo",
+              data: [81, 56, 55, 40],
+              fill: false,
+              borderColor: "#3483F9",
+              tension: 0.1,
+            },
+            {
+              label: "Despesa",
+              data: [65, 59, 80, 81],
+              fill: false,
+              borderColor: "#C20F0F",
+              tension: 0.5,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
 </html>
