@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/expense.css" />
+    <link rel="stylesheet" href="../styles/template.css" />
     <title>Backoffice | Funcionários</title>
   </head>
   <body class="container-fluid">
@@ -78,69 +78,115 @@
       </div>
     </div>
 
-    <div id="expense-body" class="row d-flex">
+    <div class="row d-flex">
       <div class="collum table-responsive">
-        <table class="table table-hover table-borderless">
+        <div id="control-month">
+          <button>
+            <i class="bi bi-arrow-left-circle-fill"></i>
+          </button>
+          <button>
+            <p>Abril</p>
+          </button>
+          <button>
+            <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+        </div>
+        <table class="table d-flex table-borderless">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">
+                <button>
+                  Dia
+                  <i class="bi bi-chevron-expand"></i>
+                </button>
+              </th>
+              <th scope="col">
+                <button>Descrição<i class="bi bi-chevron-expand"></i></button>
+              </th>
+              <th scope="col">
+                <button>Loja<i class="bi bi-chevron-expand"></i></button>
+              </th>
+              <th scope="col">
+                <button>Categoria<i class="bi bi-chevron-expand"></i></button>
+              </th>
+              <th scope="col">
+                <button>Conta<i class="bi bi-chevron-expand"></i></button>
+              </th>
+              <th scope="col">
+                <button>Valor<i class="bi bi-chevron-expand"></i></button>
+              </th>
+              <th scope="col">
+                <button>Status<i class="bi bi-chevron-expand"></i></button>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th style="color: var(--bs-red) !important" scope="row">14</th>
+              <td>
+                <p>Aluguel Restaurante</p>
+                <p>Pago para: Carlos Oliveira</p>
+              </td>
+              <td>Restaurante</td>
+              <td>Imóvel</td>
+              <td>Itaú</td>
+              <td>R$ 1.455,00</td>
+              <td>
+                <button><i class="bi bi-toggle-on"></i></button>
+                <button><i class="bi bi-three-dots-vertical"></i></button>
+              </td>
             </tr>
             <tr>
-              <th scope="row"></th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">14</th>
+              <td>
+                <p>Férias Raquel</p>
+                <p>Pago para: Raquel Mendes</p>
+              </td>
+              <td>Restaurante</td>
+              <td>Funcionário</td>
+              <td>Itaú</td>
+              <td>R$ 2.400,00</td>
+              <td>
+                <button><i class="bi bi-toggle-off"></i></button>
+                <button><i class="bi bi-three-dots-vertical"></i></button>
+              </td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <th scope="row">14</th>
+              <td>
+                <p>Sacos de Pão</p>
+                <p>Pago para: Fornecedor do Trigo</p>
+                <br />
+                <img src="../assets/cart.svg" alt="" /><br />
+                <span>Esse produto está em promoção no Ifood Shop</span>
+              </td>
+              <td>Hamburgueria</td>
+              <td>Matéria Prima</td>
+              <td>Nubank</td>
+              <td>R$ 204,70</td>
+              <td>
+                <button><i class="bi bi-toggle-on"></i></button>
+                <button><i class="bi bi-three-dots-vertical"></i></button>
+              </td>
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <th style="color: var(--bs-red) !important" scope="row">13</th>
+              <td>
+                <p>Tomate</p>
+                <p>Pago para: Feira do Joaquim</p>
+                <img src="../assets/stonks.svg" alt="" /><br />
+                <span
+                  >Esta despesa teve uma aumento em comparação anteriores</span
+                >
+              </td>
+              <td>Hamburgueria</td>
+              <td>Matéria Prima</td>
+              <td>Nubank</td>
+              <td>R$ 98,30</td>
+              <td>
+                <button><i class="bi bi-toggle-on"></i></button>
+                <button><i class="bi bi-three-dots-vertical"></i></button>
+              </td>
             </tr>
           </tbody>
         </table>

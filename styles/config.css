@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+/* TEMA */
+
+[data-bs-theme="light"] {
+  --bs-primary: hsl(356, 83%, 52%);
+  --bs-info: hsl(216, 87%, 55%);
+  --bs-gray: hsl(0, 0%, 24%);
+  --bs-gray-200: hsl(0, 0%, 93%);
+  --bs-gray-light: hsl(0, 0%, 44%);
+  --bs-green: hsl(112, 100%, 27%);
+  --bs-red-200: hsl(349, 100%, 27%);
+  --bs-box-shadow: hsla(0, 0%, 0%, 0.08);
+}
+
+/* [data-bs-theme=dark] {}*/
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i {
+  color: var(--bs-gray-light);
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.container-fluid {
+  --bs-gutter-x: 0rem !important;
+}
