@@ -73,9 +73,33 @@
       <div class="col bg-secondary">
         <p>João</p>
       </div>
-      <div class="col bg-secondary">
-        <p>Renan</p>
+      <div class="col">
+        <div class="col-12 d-flex justify-content-between custom-col">
+          <div class="custom-card">
+            <img src="../assets/despesa-red.svg" alt="Nova Despesa" />
+            <span>Nova Despesa</span>
+          </div>
+          <div class="custom-card incluir-despesa">
+            <img src="../assets/funcionario.svg" alt="Novo Funcionário" />
+            <span>Novo Funcionário</span>
+          </div>
+          <div class="custom-card novo-relatorio">
+            <img src="../assets/filtro.svg" alt="Criar filto" />
+            <span>Novo Relatório</span>
+          </div>
+          <div class="custom-card pesquisar">
+            <img src="../assets/pesquisar.svg" alt="Pesquisar" />
+            <span>Pesquisar</span>
+          </div>
+        </div>
+        <div class="notificacoes">
+          <h1>Notificações</h1>
+          <p>Entradas recorrentes/</p>
+          <p>Aumento de Receita Hamburguer/</p>
+          <p>Pagamento ifood/</p>
+        </div>
       </div>
+    </div>
     </div>
 
     <div class="row d-flex">
@@ -193,10 +217,44 @@
       </div>
     </div>
 
+    <div id="search-overlay" class="search-overlay">
+      <div class="search-box">
+        <button class="close-button">X</button>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Digite sua pesquisa..." />
+          <button class="search-button">Pesquisar</button>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchCard = document.querySelector('.custom-card.pesquisar');
+        const searchOverlay = document.getElementById('search-overlay');
+        const closeButton = document.querySelector('.close-button');
+
+        searchCard.addEventListener('click', function() {
+          searchOverlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+
+        closeButton.addEventListener('click', function() {
+          searchOverlay.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        });
+
+        searchOverlay.addEventListener('click', function(e) {
+          if (e.target === searchOverlay) {
+            searchOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

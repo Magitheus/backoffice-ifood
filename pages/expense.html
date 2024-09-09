@@ -84,7 +84,7 @@
             <img src="../assets/relatorio.svg" alt="Novo Relatório" />
             <span>Novo Relatório</span>
           </div>
-          <div class="custom-card">
+          <div class="custom-card pesquisar">
             <img src="../assets/pesquisar.svg" alt="Pesquisar" />
             <span>Pesquisar</span>
           </div>
@@ -217,11 +217,7 @@
       <div class="search-box">
         <button class="close-button">X</button>
         <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Digite sua pesquisa..."
-          />
+          <input type="text" class="search-input" placeholder="Digite sua pesquisa..." />
           <button class="search-button">Pesquisar</button>
         </div>
       </div>
@@ -233,25 +229,25 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const searchCard = document.querySelector(".custom-card.pesquisar");
-        const searchOverlay = document.getElementById("search-overlay");
-        const closeButton = document.querySelector(".close-button");
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchCard = document.querySelector('.custom-card.pesquisar');
+        const searchOverlay = document.getElementById('search-overlay');
+        const closeButton = document.querySelector('.close-button');
 
-        searchCard.addEventListener("click", function () {
-          searchOverlay.style.display = "flex";
-          document.body.style.overflow = "hidden";
+        searchCard.addEventListener('click', function() {
+          searchOverlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
         });
 
-        closeButton.addEventListener("click", function () {
-          searchOverlay.style.display = "none";
-          document.body.style.overflow = "auto";
+        closeButton.addEventListener('click', function() {
+          searchOverlay.style.display = 'none';
+          document.body.style.overflow = 'auto';
         });
 
-        searchOverlay.addEventListener("click", function (e) {
+        searchOverlay.addEventListener('click', function(e) {
           if (e.target === searchOverlay) {
-            searchOverlay.style.display = "none";
-            document.body.style.overflow = "auto";
+            searchOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
           }
         });
       });
