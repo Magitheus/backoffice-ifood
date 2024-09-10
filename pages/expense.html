@@ -68,7 +68,33 @@
 
     <div class="row d-flex justify-content-between gap-3 mt-5">
       <div class="col">
-        <p>João</p>
+            <div class="frame-parent1">
+                <div class="despesas-wrapper1">
+                    <b class="despesas1">Despesas</b>
+                </div>
+                <div class="frame-group1">
+                    <div class="rectangle-parent1">
+                        <div class="frame-child1">
+                        </div>
+                        <div class="div1">50%</div>
+                    </div>
+                    <div class="frame-container1">
+                        <div class="pago-paren1t">
+                            <div class="pago1">Pago</div>
+                            <div class="r-6357471">R$  6.357,47</div>
+                        </div>
+                        <div class="pendente-1">
+                            <div class="pago1">Pendente</div>
+                            <div class="pago1">R$ 4.212,00</div>
+                        </div>
+                        <div class="pendente-parent1">
+                            <div class="pago1">Total</div>
+                            <div class="pago1">R$ 10.569,47</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </html>
       </div>
       <div class="col">
         <div class="col-12 d-flex justify-content-between custom-col">
@@ -84,7 +110,7 @@
             <img src="../assets/relatorio.svg" alt="Novo Relatório" />
             <span>Novo Relatório</span>
           </div>
-          <div class="custom-card pesquisar">
+          <div class="custom-card">
             <img src="../assets/pesquisar.svg" alt="Pesquisar" />
             <span>Pesquisar</span>
           </div>
@@ -217,7 +243,11 @@
       <div class="search-box">
         <button class="close-button">X</button>
         <div class="search-container">
-          <input type="text" class="search-input" placeholder="Digite sua pesquisa..." />
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Digite sua pesquisa..."
+          />
           <button class="search-button">Pesquisar</button>
         </div>
       </div>
@@ -229,25 +259,25 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const searchCard = document.querySelector('.custom-card.pesquisar');
-        const searchOverlay = document.getElementById('search-overlay');
-        const closeButton = document.querySelector('.close-button');
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchCard = document.querySelector(".custom-card.pesquisar");
+        const searchOverlay = document.getElementById("search-overlay");
+        const closeButton = document.querySelector(".close-button");
 
-        searchCard.addEventListener('click', function() {
-          searchOverlay.style.display = 'flex';
-          document.body.style.overflow = 'hidden';
+        searchCard.addEventListener("click", function () {
+          searchOverlay.style.display = "flex";
+          document.body.style.overflow = "hidden";
         });
 
-        closeButton.addEventListener('click', function() {
-          searchOverlay.style.display = 'none';
-          document.body.style.overflow = 'auto';
+        closeButton.addEventListener("click", function () {
+          searchOverlay.style.display = "none";
+          document.body.style.overflow = "auto";
         });
 
-        searchOverlay.addEventListener('click', function(e) {
+        searchOverlay.addEventListener("click", function (e) {
           if (e.target === searchOverlay) {
-            searchOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            searchOverlay.style.display = "none";
+            document.body.style.overflow = "auto";
           }
         });
       });
