@@ -14,6 +14,19 @@
   background-color: transparent;
 }
 
+.col-para-dois {
+  display: flex;
+  min-width: 32.8rem;
+  max-width: 67.6rem;
+  padding: 1rem 0rem 2rem 0rem;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1 0 0;
+  background-color: transparent;
+  justify-content: end;
+  padding-right: 2rem;
+}
+
 .notificacoes {
   display: flex;
   height: 15.8rem;
@@ -58,6 +71,7 @@
   box-shadow: 0 0.4rem 0.4rem 0 var(--bs-box-shadow);
   font-size: 1.5rem;
   font-weight: 500;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
