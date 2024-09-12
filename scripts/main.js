@@ -30,7 +30,7 @@ function nextPage(){
     }
 
   if (validateEmail) {
-    window.location.href = "/pages/dashboard.html";
+    window.location.href = "./pages/dashboard.html";
   } else {
     showToast("E-mail inválido");
   }
