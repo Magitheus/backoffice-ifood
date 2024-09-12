@@ -365,3 +365,191 @@ details button {
   position: absolute;
   right: 0;
 }
+.despesas {
+  position: relative;
+  line-height: 70px;
+}
+.despesas-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-child1 {
+  width: 235px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: #eb0033;
+  height: 24px;
+}
+.div1 {
+  position: relative;
+}
+.rectangle-parent1 {
+  align-self: stretch;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  border: 10px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.pago1 {
+  position: relative;
+  font-weight: 500;
+}
+.r-6357471 {
+  position: relative;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+.pago-parent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #ea1d2c;
+}
+.pendente-parent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.frame-container1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 29.5px;
+}
+.frame-group1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 32px;
+  text-align: left;
+  font-size: 16.45px;
+  color: #000;
+}
+.frame-parent1 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 33px;
+  text-align: center;
+  font-size: 48.4px;
+  color: #3e3e3e;
+  font-family: Inter;
+}
+.receitas {
+  position: relative;
+  line-height: 70px;
+}
+.receitas-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-child {
+  width: 235px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: #128900;
+  height: 24px;
+}
+.div {
+  position: relative;
+}
+.rectangle-parent {
+  align-self: stretch;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  border: 10px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.recebido {
+  position: relative;
+  font-weight: 500;
+}
+.r-821236 {
+  position: relative;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+.recebido-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #128900;
+}
+.pendente-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.r {
+  font-weight: 500;
+}
+.frame-div {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 29.5px;
+}
+.frame-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 32px;
+  text-align: left;
+  font-size: 16.45px;
+  color: #000;
+}
+.frame-group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 33px;
+}
+.frame-parent {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 48.4px;
+  color: #3e3e3e;
+  font-family: Inter;
+}
