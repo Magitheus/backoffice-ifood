@@ -19,10 +19,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="../scripts/transactions.js" defer></script>
     <link rel="stylesheet" href="../styles/template.css" />
     <title>Backoffice | Transações</title>
   </head>
-  <body class="container-fluid">
+  <body class="container-fluid" onload="carregarTransacoes()">
     <nav class="navbar navbar-expand-sm">
       <button
         class="navbar-toggler"
@@ -137,7 +138,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <!-- <tr>
               <th style="color: var(--bs-red) !important" scope="row">14</th>
               <td>
                 <p>Aluguel Restaurante</p>
@@ -203,7 +204,7 @@
                 <button><i class="bi bi-toggle-on"></i></button>
                 <button><i class="bi bi-three-dots-vertical"></i></button>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
@@ -218,7 +219,7 @@
             class="search-input"
             placeholder="Digite sua pesquisa..."
           />
-          <button class="search-button">Pesquisar</button>
+          <button onclick="filtrarTransacoes()" class="search-button">Pesquisar</button>
         </div>
       </div>
     </div>
@@ -228,11 +229,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/transactions.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const searchCard = document.querySelector(".custom-card.pesquisar");
         const searchOverlay = document.getElementById("search-overlay");
         const closeButton = document.querySelector(".close-button");
+        const searchButton = document.querySelector(".search-button");
 
         searchCard.addEventListener("click", function () {
           searchOverlay.style.display = "flex";
@@ -251,6 +254,8 @@
           }
         });
       });
+
+
     </script>
   </body>
 </html>

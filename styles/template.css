@@ -93,7 +93,7 @@ tbody tr {
   justify-content: space-evenly;
   align-items: flex-start;
   align-self: stretch;
-  border-left: 2px solid var(--bs-red);
+  border-left: 2px solid var(--bs-primary);
   /* flex-direction: column; */
   /* justify-content: center; */
 }
@@ -124,7 +124,7 @@ tbody tr td {
 }
 
 tbody th {
-  color: transparent !important;
+  /* color: transparent !important; */
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 3rem;

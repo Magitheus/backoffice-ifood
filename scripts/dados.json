@@ -1,0 +1,62 @@
+{
+  "transacoes": [
+    {
+      "dia": 14,
+      "descricao": "Aluguel Restaurante",
+      "pagoPara": "Carlos Oliveira",
+      "loja": "Restaurante",
+      "categoria": "Imóvel",
+      "conta": "Itaú",
+      "valor": "R$ 1.455,00",
+      "status": "off"
+    },
+    {
+      "dia": 14,
+      "descricao": "Aluguel Restaurante",
+      "pagoPara": "Carlos Oliveira",
+      "loja": "Restaurante",
+      "categoria": "Imóvel",
+      "conta": "Itaú",
+      "valor": "R$ 1.455,00",
+      "status": "off"
+    },
+    {
+      "dia": 14,
+      "descricao": "Férias Raquel",
+      "pagoPara": "Raquel Mendes",
+      "loja": "Restaurante",
+      "categoria": "Funcionário",
+      "conta": "Itaú",
+      "valor": "R$ 2.400,00",
+      "status": "off"
+    },
+    {
+      "dia": 14,
+      "descricao": "Sacos de Pão",
+      "pagoPara": "Fornecedor do Trigo",
+      "loja": "Hamburgueria",
+      "categoria": "Matéria Prima",
+      "conta": "Nubank",
+      "valor": "R$ 204,70",
+      "status": "on",
+      "promocao": {
+        "mensagem": "Esse produto está em promoção no Ifood Shop",
+        "imagem": "../assets/cart.svg"
+      }
+    },
+    {
+      "dia": 13,
+      "descricao": "Tomate",
+      "pagoPara": "Feira do Joaquim",
+      "loja": "Hamburgueria",
+      "categoria": "Matéria Prima",
+      "conta": "Nubank",
+      "valor": "R$ 98,30",
+      "status": "on",
+      "alerta": {
+        "mensagem": "Esta despesa teve um aumento em comparação anteriores",
+        "imagem": "../assets/stonks.svg"
+      }
+    }
+  ]
+}
