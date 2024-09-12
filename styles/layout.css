@@ -74,6 +74,10 @@
   text-align: center;
 }
 
+.custom-card:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .row {
     padding-left: 12rem;

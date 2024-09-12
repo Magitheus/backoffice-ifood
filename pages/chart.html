@@ -70,18 +70,28 @@
       id="expense-header"
       class="row d-flex justify-content-between gap-3 mt-5"
     >
-      <div class="col bg-secondary">
-        <p>João</p>
+      <div class="col">
+        <div class="frame-parent1">
+          <div class="greeting-container">
+            <div class="text-container">
+              <h1 class="greeting-text">Gráficos</h1>
+            </div>
+            <div class="rotated-border"></div>
+            <div class="image-container">
+              <img class="first-image" src="/assets/first-image.png" />
+              <img class="second-image" src="/assets/second-image.png" />
+            </div>
+          </div>
+        </div>
       </div>
-        <div class="col-para-dois">
-          <div class="custom-card">
-            <img src="../assets/black-chart.svg" alt="Novo Relatório" />
-            <span>Personalizar Gráficos</span>
-          </div>
-          <div class="custom-card pesquisar">
-            <img src="../assets/calendario.svg" alt="Pesquisar" />
-            <span>Personalizar Períodos</span>
-          </div>
+      <div class="col-para-dois">
+        <div class="custom-card">
+          <img src="../assets/black-chart.svg" alt="Novo Relatório" />
+          <span>Personalizar Gráficos</span>
+        </div>
+        <div class="custom-card pesquisar">
+          <img src="../assets/calendario.svg" alt="Pesquisar" />
+          <span>Personalizar Períodos</span>
         </div>
       </div>
     </div>
@@ -223,8 +233,23 @@
       <div class="col-12 expense-category d-flex">
         <h2>Balancete</h2>
         <div id="expense-category-body" class="d-flex justify-content-between">
-          <div><canvas id="myChartt"></canvas></div>
-          <div><h1>João</h1></div>
+          <div style="width: 80%">
+            <canvas id="myChartt"></canvas>
+          </div>
+          <div id="resume">
+            <div>
+              <p style="color: #128900">Receitas</p>
+              <p style="color: #128900">R$85.997,00</p>
+            </div>
+            <div>
+              <p style="color: #890019">Depesas</p>
+              <p style="color: #890019">R$69.018,00</p>
+            </div>
+            <div>
+              <p>Balancetes</p>
+              <p>R$16.979,00</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -243,20 +268,33 @@
       new Chart(ctxx, {
         type: "bar",
         data: {
-          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          labels: [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez",
+          ],
           datasets: [
             {
-              label: "",
-              data: [81, 56, 55, 40],
-              fill: false,
-              borderColor: "#3483F9",
+              label: "Receita",
+              data: [81, 56, 55, 40, 81, 56, 55, 40, 81, 56, 55, 40],
+              fill: true,
+              borderColor: "#128900",
               tension: 0.1,
             },
             {
               label: "Despesa",
-              data: [65, 59, 80, 81],
-              fill: false,
-              borderColor: "#C20F0F",
+              data: [65, 59, 80, 81, 81, 56, 55, 40, 81, 56, 55, 40],
+              fill: true,
+              borderColor: "#890019",
               tension: 0.5,
             },
           ],
@@ -266,7 +304,7 @@
       new Chart(ctx, {
         type: "doughnut",
         data: {
-          labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+          labels: ["Entregas", "Funcionário", "Imóvel", "Matéria Prima"],
           datasets: [
             {
               label: "",
@@ -274,7 +312,7 @@
               fill: false,
               borderColor: "#3483F9",
               tension: 0.1,
-            }
+            },
           ],
         },
       });

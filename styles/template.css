@@ -290,7 +290,7 @@ tbody tr td span {
   font-weight: 700;
 }
 
- div summary {
+div summary {
   color: #000;
   font-size: 2rem;
   font-weight: 500;
@@ -298,7 +298,7 @@ tbody tr td span {
   list-style: none;
 }
 
- div summary::before {
+div summary::before {
   content: ">";
   color: var(--bs-gray);
   padding-right: 1rem;
@@ -309,7 +309,7 @@ div details[open] summary::before {
   color: var(--bs-red);
 }
 
- div details p {
+div details p {
   text-indent: 2rem;
   color: var(--bs-black);
 
@@ -349,7 +349,7 @@ details button {
 
 #expense-category-body {
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 .expense-category details {
   padding-left: 4rem;
@@ -365,82 +365,108 @@ details button {
   position: absolute;
   right: 0;
 }
-.despesas {
-  position: relative;
-  line-height: 70px;
-}
-.despesas-wrapper1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.frame-child1 {
-  width: 235px;
-  position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  background-color: #eb0033;
-  height: 24px;
-}
-.div1 {
-  position: relative;
-}
-.rectangle-parent1 {
-  align-self: stretch;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-  border: 10px solid #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 24px;
-}
-.pago1 {
-  position: relative;
-  font-weight: 500;
-}
-.r-6357471 {
-  position: relative;
-  font-weight: 500;
-  white-space: pre-wrap;
-}
-.pago-parent1 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: #ea1d2c;
-}
-.pendente-parent1 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.frame-container1 {
-  align-self: stretch;
-  display: flex;
+
+#resume {
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  gap: 10px;
-  font-size: 29.5px;
+  gap: 1.3rem;
+  width: 24.3rem;
+  justify-content: space-evenly;
 }
+
+#resume div p:nth-child(2) {
+  font-size: 3.9rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+
+.greeting-container {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.text-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.greeting-text {
+  text-align: center;
+  color: var(--Colors-Style-Ifood-Mine-Shaft, #3e3e3e);
+  font-size: 4.84rem;
+  font-weight: 700;
+  line-height: 7rem;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.rotated-border {
+  width: 0.4rem;
+  height: 6rem;
+  background-color: black;
+}
+
+.image-container {
+  width: 8.65rem;
+  height: 6.1rem;
+  position: relative;
+}
+
+.first-image {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  border-radius: 3.69rem;
+  flex-shrink: 0;
+}
+
+.second-image {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  left: 2.65rem;
+  border-radius: 8rem;
+  flex-shrink: 0;
+}
+
 .frame-group1 {
-  align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-end;
-  gap: 32px;
-  text-align: left;
-  font-size: 16.45px;
-  color: #000;
+  align-items: flex-start;
+  gap: 3.2rem;
+  align-self: stretch;
 }
+
+.rectangle-parent1 {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  align-self: stretch;
+  background: #ededed;
+
+  border-radius: 0.8rem;
+  border: 1rem solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.frame-child1 {
+  width: 23.5rem;
+  height: 2.4rem;
+
+  border-radius: 0.8rem;
+  background: var(--bs-primary);
+  box-shadow: 0px 4px 4px 0px var(--bs-box-shadow);
+}
+
 .frame-parent1 {
   width: 100%;
   position: relative;
@@ -452,104 +478,31 @@ details button {
   text-align: center;
   font-size: 48.4px;
   color: #3e3e3e;
-  font-family: Inter;
 }
-.receitas {
-  position: relative;
-  line-height: 70px;
+
+.div1 {
+  color: var(--bs-black);
+  font-size: 1.6rem;
 }
-.receitas-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.frame-child {
-  width: 235px;
-  position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  background-color: #128900;
-  height: 24px;
-}
-.div {
-  position: relative;
-}
-.rectangle-parent {
-  align-self: stretch;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-  border: 10px solid #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 24px;
-}
-.recebido {
-  position: relative;
-  font-weight: 500;
-}
-.r-821236 {
-  position: relative;
-  font-weight: 500;
-  white-space: pre-wrap;
-}
-.recebido-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: #128900;
-}
-.pendente-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.r {
-  font-weight: 500;
-}
-.frame-div {
-  align-self: stretch;
+
+.frame-container1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-end;
-  gap: 10px;
-  font-size: 29.5px;
-}
-.frame-container {
+  align-items: flex-start;
+  gap: 1rem;
   align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 32px;
-  text-align: left;
-  font-size: 16.45px;
-  color: #000;
 }
-.frame-group {
+
+.parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 33px;
 }
-.frame-parent {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: center;
-  font-size: 48.4px;
-  color: #3e3e3e;
-  font-family: Inter;
+
+.parent p {
+  color: var(--bs-black);
+  font-size: 2.95rem;
+  font-weight: 500;
 }
