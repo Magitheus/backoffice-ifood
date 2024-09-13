@@ -258,6 +258,19 @@
       </div>
     </div>
 
+    <div class="edit-overlay">
+      <div class="edit-box">
+        <form>
+          <button type="button" class="edit-close-button">X</button>
+    
+          <h1>Editar Despesa</h1>
+    
+          <button type="submit" class="save-button">Salvar</button>
+          <button type="button" class="form-button delete-button">Excluir</button>
+        </form>
+      </div>
+    </div>
+  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -286,6 +299,24 @@
           }
         });
       });
+
+        const editButton = document.querySelector('.bi.bi-three-dots-vertical');
+        const overlay = document.querySelector('.edit-overlay');
+        const closeOverlay = document.querySelector('.edit-close-button');
+
+        editButton.addEventListener('click', () => {
+          overlay.style.display = 'flex';
+        });
+
+        closeOverlay.addEventListener('click', () => {
+          overlay.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+          if (event.target === overlay) {
+            overlay.style.display = 'none';
+          }
+        });
     </script>
   </body>
 </html>
