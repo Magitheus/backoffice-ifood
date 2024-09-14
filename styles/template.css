@@ -530,14 +530,14 @@ details button {
 }
 
 .edit-close-button {
-  width: 35px;
-  height: 35px;
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
-  top: 133px;
-  left: 603px;
+  top: 13.3rem;
+  left: 60.3rem;
   background-color: var(--bs-primary);
   color: #fff;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   border: none;
   border-radius: 50%;
@@ -566,29 +566,6 @@ details button {
   word-wrap: break-word;
 }
 
-.delete-button {
-  position: absolute;
-  width: 22.7rem;
-  height: 5.2rem;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  left: 14.6rem;
-  top: 91.5rem;
-  background: white;
-  border-radius: 0.5rem;
-  border: 0.2rem solid var(--bs-primary);
-  color: var(--bs-primary);
-  font-size: 1.985rem;
-  font-weight: 400;
-  line-height: 2.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .save-button {
   position: absolute;
   width: 22.7rem;
@@ -614,6 +591,29 @@ details button {
 
 .save-button:focus {
   outline: none;
+}
+
+.delete-button {
+  position: absolute;
+  width: 22.7rem;
+  height: 5.2rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  left: 14.6rem;
+  top: 91.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--bs-primary);
+  color: var(--bs-primary);
+  font-size: 1.985rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .delete-button:hover {
