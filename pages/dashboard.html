@@ -35,7 +35,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="./dashboard.html"
         ><img src="../assets/logo-white.svg" alt=""
       /></a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -43,7 +43,7 @@
           ><img src="../assets/home.svg" alt="" />
           <p>Painéis</p>
         </a>
-        <a class="nav-link" href="../pages/banks.html"
+        <a class="nav-link blocked" href="#"
           ><img src="../assets/bank.svg" alt="" />
           <p>Contas</p>
         </a>
@@ -91,7 +91,7 @@
         >
           <div
             class="custom-card"
-            onclick="window.location.href='url-incluir-receita.html';"
+            onclick="window.location.href='./income.html';"
           >
             <img
               src="../assets/incluir-receita-icon.svg"
@@ -101,7 +101,7 @@
           </div>
           <div
             class="custom-card"
-            onclick="window.location.href='url-incluir-despesa.html';"
+            onclick="window.location.href='./expense.html';"
           >
             <img
               src="../assets/incluir-despesa-icon.svg"
@@ -109,15 +109,13 @@
             />
             <span>Incluir Despesa</span>
           </div>
-          <div
-            class="custom-card"
-            onclick="window.location.href='url-incluir-transacao.html';"
-          >
+          <div id="blocked" class="custom-card">
             <img
+              class="blocked"
               src="../assets/incluir-transacao-icon.svg"
               alt="Incluir Transação"
             />
-            <span>Incluir Transação</span>
+            <span class="blocked">Incluir Transação</span>
           </div>
           <div
             class="custom-card"
@@ -128,9 +126,11 @@
           </div>
         </div>
         <div class="container-account">
-          <p class="title">Suas contas <i class="bi bi-chevron-right"></i></p>
-          <div class="account">
-            <img class="icon" src="/assets/itau.svg" alt="icon-itau" />
+          <p class="title">
+            Suas contas <i class="bi bi-chevron-right blocked"></i>
+          </p>
+          <div class="account blocked">
+            <img class="icon" src="../assets/itau.svg" alt="icon-itau" />
             <div class="name">Itaú</div>
             <div class="balance">R$ 11.907,79</div>
           </div>
@@ -138,8 +138,12 @@
             <div>Previsão</div>
             <div>R$ 12.003,87</div>
           </div>
-          <div class="account">
-            <img class="icon" src="/assets/nubank (1).svg" alt="icon-nubank" />
+          <div class="account blocked">
+            <img
+              class="icon"
+              src="../assets/nubank (1).svg"
+              alt="icon-nubank"
+            />
             <div class="name">Nubank</div>
             <div class="balance">R$ 7.953,00</div>
           </div>
@@ -147,11 +151,11 @@
             <div>Previsão</div>
             <div>R$ 9.632,21</div>
           </div>
-          <div class="account">
+          <div class="account blocked">
             <img
               class="icon"
               id="1"
-              src="/assets/carteira Ifood.svg"
+              src="../assets/carteira Ifood.svg"
               alt="icon-ifood"
             />
             <div class="name">Carteira Ifood</div>
@@ -162,7 +166,7 @@
             <div>R$ 9.632,21</div>
           </div>
         </div>
-        <div id="additional-card">
+        <div id="additional-card" class="blocked">
           <p>Deseja adicionar um novo card ?</p>
         </div>
       </div>
@@ -184,7 +188,7 @@
           </a>
           <div class="card">
             <div class="card-header">
-              <span>Faturamento <i class="bi bi-chevron-right"></i></span>
+              <span>Faturamento</span>
               <i class="bi bi-info-circle-fill"></i>
             </div>
             <div class="card-content">
@@ -241,14 +245,14 @@
           <div id="chart-header">
             <div>
               <p>Vendas nas lojas</p>
-              <i class="bi bi-chevron-right"></i>
+              <i class="blocked bi bi-chevron-right"></i>
             </div>
             <i class="bi bi-info-circle-fill"></i>
           </div>
 
-          <div class="conteiner-loja">
+          <div class="conteiner-loja blocked">
             <div class="logo-section">
-              <img src="/assets\loja1.png" />
+              <img src="../assets/loja1.png" />
               <p>Hamburgueria</p>
             </div>
             <div class="balance-section">
@@ -266,9 +270,9 @@
               </div>
             </div>
           </div>
-          <div class="conteiner-loja">
+          <div class="conteiner-loja blocked">
             <div class="logo-section">
-              <img src="/assets\loja2.png" />
+              <img src="../assets/loja2.png" />
               <p>Restaurante</p>
             </div>
             <div class="balance-section">
@@ -295,6 +299,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const ctx = document.getElementById("myChart");

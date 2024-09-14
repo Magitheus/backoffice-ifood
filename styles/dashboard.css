@@ -11,11 +11,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--bs-gray-100);
+  background: var(--bs-gray-200);
 }
 
 /* ACCOUNTSSSSS */
 .container-account {
+  border-radius: 1.2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: var(--bs-white);
   padding: 1rem;
   margin-bottom: 1rem;
@@ -265,7 +267,7 @@ body {
 
 .greeting-text {
   text-align: center;
-  color: var(--Colors-Style-Ifood-Mine-Shaft, #3E3E3E);
+  color: var(--bs-gray);
   font-size: 4.84rem;
   font-weight: 700;
   line-height: 7rem;

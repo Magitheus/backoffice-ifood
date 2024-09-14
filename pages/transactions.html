@@ -36,7 +36,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./dashboard.html">
         <img src="../assets/logo-white.svg" alt="" />
       </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -102,7 +102,7 @@
             <i class="bi bi-arrow-left-circle-fill"></i>
           </button>
           <button>
-            <p>Abril</p>
+            <p>Abril / 2024</p>
           </button>
           <button>
             <i class="bi bi-arrow-right-circle-fill"></i>
@@ -219,7 +219,9 @@
             class="search-input"
             placeholder="Digite sua pesquisa..."
           />
-          <button onclick="filtrarTransacoes()" class="search-button">Pesquisar</button>
+          <button onclick="filtrarTransacoes()" class="search-button">
+            Pesquisar
+          </button>
         </div>
       </div>
     </div>
@@ -229,6 +231,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+    </script>
     <script src="../scripts/transactions.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -254,8 +261,6 @@
           }
         });
       });
-
-
     </script>
   </body>
 </html>

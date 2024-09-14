@@ -27,6 +27,10 @@ a.nav-link p {
   margin: 0;
 }
 
+.navbar:hover .nav-link {
+  justify-content: start;
+}
+
 .navbar:hover a.nav-link p {
   display: flex;
   color: #fff;

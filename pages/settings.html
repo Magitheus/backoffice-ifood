@@ -1,93 +1,203 @@
 <!DOCTYPE html>
-<html>
-<head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
+<html lang="pt-br" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/template.css" />
+    <title>Backoffice | Configurações</title>
+  </head>
+  <body class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="./dashboard.html"
+        ><img src="../assets/logo-white.svg" alt=""
+      /></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="nav-link" aria-current="page" href="./dashboard.html"
+          ><img src="../assets/home.svg" alt="" />
+          <p>Painéis</p>
+        </a>
+        <a class="nav-link" href="../pages/banks.html"
+          ><img src="../assets/bank.svg" alt="" />
+          <p>Contas</p>
+        </a>
+        <a class="nav-link" href="../pages/chart.html"
+          ><img src="../assets/chart.svg" alt="" />
+          <p>Gráficos</p></a
+        >
+        <a class="nav-link" href="../pages/employees.html"
+          ><img src="../assets/pepleo-bag.svg" alt="" />
+          <p>Funcionários</p></a
+        >
+        <a class="nav-link active" href="../pages/transactions.html"
+          ><img src="../assets/sheet.svg" alt="" />
+          <p>Relatórios</p></a
+        >
+        <a class="nav-link" href="../pages/settings.html"
+          ><img src="../assets/config.svg" alt="" />
+          <p>Configurações</p></a
+        >
+      </div>
+    </nav>
 
-  	<link rel="stylesheet"  href="/styles/settings.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+    <div class="row d-flex justify-content-between gap-3 mt-5">
+      <div class="col">
+        <div class="frame-parent1">
+          <div class="greeting-container">
+            <div class="text-container">
+              <h1 class="greeting-text">Configurações</h1>
+            </div>
+            <div class="rotated-border"></div>
+            <div class="image-container">
+              <img src="/assets/first-image.png" />
+              <img src="/assets/second-image.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div id="expense-body" class="row d-flex gap-3 mt-5 flex-wrap">
+      <div class="col settings">
+        <h2>Funcionários com acesso ao sistema</h2>
+        <div id="list">
+          <div class="item-list">
+            <p><strong>Renan</strong> Administrador</p>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="item-list">
+            <p><strong>Caio</strong> Gerente</p>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="item-list">
+            <p><strong>João</strong> Funcionário</p>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="item-list">
+            <p><strong>Otávio</strong> Gerente</p>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col settings">
+        <h2>Minhas configurações</h2>
+        <div id="list">
+          <div class="item-list others">
+            <p>
+              <span>Meus Bancos</span><br />Configurações relacionadas a sua
+              carteira e aos seus bancos.
+            </p>
+            <div class="image-container">
+              <img src="../assets/itau.svg" />
+              <img src="../assets/nubank (1).svg" />
+              <img src="../assets/carteira Ifood.svg" />
+              <img src="../assets/pontos.svg" />
+            </div>
+          </div>
+          <div class="item-list others">
+            <p>
+              <span>Minhas Lojas</span><br />Configurações relacionadas aos seus
+              estabelecimentos de compras.
+            </p>
+            <div class="image-container">
+              <img src="../assets/OIG4.png" />
+              <img src="../assets/OIG2.png" />
+              <img src="../assets/pontos.svg" />
+            </div>
+          </div>
+          <div class="item-list others">
+            <p>
+              <span>Minhas informações</span><br />Configurações dos meus dados
+              e informações de cadastro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="expense-body"
+      class="row d-flex justify-content-between flex-wrap buttons"
+    >
+      <button id="blocked" type="button">Adicionar novo funcionário +</button>
+      <button id="theme-toggle">
+        Ativar modo escuro<i class="bi bi-toggle-off"></i>
+      </button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const containers = document.querySelectorAll(".image-container");
+      const offset = 2.5;
 
+      containers.forEach((container) => {
+        const images = container.querySelectorAll("img");
+        images.forEach((img, index) => {
+          img.style.left = `${index * offset}rem`;
+        });
+      });
 
-</head>
-<body>
+      const button = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement; // Seleciona o elemento <html>
 
-  	<div class="configuraes">
-    		<b class="funcionrios-com-acesso">Funcionários com acesso ao sistema</b>
-    		<b class="minhas-configuraes">Minhas configurações</b>
-    		<div class="frame-parent">
-      			<div class="renan-parent">
-        				<b class="renan">Renan</b>
-        				<div class="administrador">Administrador</div>
-      			</div>
-      			<img class="vector-icon" alt="" src="/assets/Vector.svg">
+      // Verifica se existe preferência salva no Local Storage
+      const savedTheme = localStorage.getItem("theme") || "light";
 
-    		</div>
-    		<div class="frame-group">
-      			<div class="renan-parent">
-        				<b class="renan">João</b>
-        				<div class="administrador">Funcionário</div>
-      			</div>
-      			<img class="vector-icon" alt="" src="/assets/Vector.svg">
+      // Aplica o tema salvo ao carregar a página
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+      updateButton(savedTheme);
 
-    		</div>
-    		<div class="frame-container">
-      			<div class="renan-parent">
-        				<b class="renan">Caio</b>
-        				<div class="administrador">Gerente</div>
-      			</div>
-      			<img class="vector-icon" alt="" src="/assets/Vector.svg">
+      // Atualiza o texto e ícone do botão com base no tema
+      function updateButton(theme) {
+        if (theme === "dark") {
+          button.innerHTML =
+            'Desativar modo escuro <i class="bi bi-toggle-on"></i>';
+        } else {
+          button.innerHTML =
+            'Ativar modo escuro <i class="bi bi-toggle-off"></i>';
+        }
+      }
 
-    		</div>
-    		<div class="frame-div">
-      			<div class="renan-parent">
-        				<b class="renan">Otávio</b>
-        				<div class="administrador">Gerente</div>
-      			</div>
-      			<img class="vector-icon" alt="" src="/assets/Vector.svg">
+      // Alterna entre claro e escuro ao clicar no botão
+      button.addEventListener("click", () => {
+        const currentTheme = htmlElement.getAttribute("data-bs-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-    		</div>
-    		<b class="configuraes1">Configurações</b>
-    		<div class="adicionar-novo-funcionrio-wrapper">
-      			<div class="administrador">Adicionar novo funcionário + </div>
-    		</div>
-    		<div class="meus-bancos-parent">
-      			<b class="meus-bancos">Meus Bancos</b>
-      			<div class="configuraes-relacionadas-a">Configurações relacionadas a sua carteira e aos seus bancos.</div>
-      			<img class="frame-child" alt="" src="/assets/itau.svg">
+        // Aplica o novo tema
+        htmlElement.setAttribute("data-bs-theme", newTheme);
+        updateButton(newTheme);
 
-    		</div>
-    		<div class="minhas-lojas-parent">
-      			<b class="meus-bancos">Minhas Lojas</b>
-      			<div class="configuraes-relacionadas-aos">Configurações relacionadas aos seus estabelecimentos de compras.</div>
-      			<div class="oig2-1-parent">
-        				<img class="oig2-1-icon" alt="" src="/assets/OIG2 1.png">
-
-        				<img class="oig4-1-icon" alt="" src="/assets/OIG4 1.png">
-
-        				<div class="pontos">
-          					<div class="pontos-child">
-          					</div>
-          					<div class="div">...</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div class="minhas-informaes-parent">
-      			<b class="renan">Minhas informações</b>
-      			<div class="configuraes-dos-meus">Configurações dos meus dados e informações de cadastro.</div>
-    		</div>
-    		<div class="configuraes-child">
-    		</div>
-    		<div class="image-1-parent">
-      			<img class="image-1-icon" alt="" src="/assets/image 1.png">
-
-      			<img class="img-20230325-085340-1752-1-icon" alt="" src="/assets/IMG_20230325_085340_175~2 1.png">
-
-    		</div>
-  	</div>
-
-
-
-
-</body>
+        // Salva a preferência no Local Storage
+        localStorage.setItem("theme", newTheme);
+      });
+    </script>
+  </body>
 </html>

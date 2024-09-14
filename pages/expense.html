@@ -75,8 +75,8 @@
             </div>
             <div class="rotated-border"></div>
             <div class="image-container">
-              <img class="first-image" src="/assets/first-image.png" />
-              <img class="second-image" src="/assets/second-image.png" />
+              <img class="first-image" src="../assets/first-image.png" />
+              <img class="second-image" src="../assets/second-image.png" />
             </div>
           </div>
           <div class="frame-group1">
@@ -103,19 +103,19 @@
       </div>
       <div class="col">
         <div class="col-12 d-flex justify-content-between custom-col">
-          <div class="custom-card">
+          <div id="blocked" class="custom-card">
             <img src="../assets/despesa-red.svg" alt="Nova Despesa" />
             <span>Nova Despesa</span>
           </div>
-          <div class="custom-card">
+          <div id="blocked" class="custom-card">
             <img src="../assets/filtro.svg" alt="Criar Filtro" />
             <span>Criar Filtro</span>
           </div>
-          <div class="custom-card">
+          <div id="blocked" class="custom-card">
             <img src="../assets/relatorio.svg" alt="Novo Relatório" />
             <span>Novo Relatório</span>
           </div>
-          <div class="custom-card">
+          <div id="blocked" class="custom-card">
             <img src="../assets/pesquisar.svg" alt="Pesquisar" />
             <span>Pesquisar</span>
           </div>
@@ -136,7 +136,7 @@
             <i class="bi bi-arrow-left-circle-fill"></i>
           </button>
           <button>
-            <p>Abril</p>
+            <p>Abril / 2024</p>
           </button>
           <button>
             <i class="bi bi-arrow-right-circle-fill"></i>
@@ -263,6 +263,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const searchCard = document.querySelector(".custom-card.pesquisar");

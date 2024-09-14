@@ -35,7 +35,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href="./dashboard.html"
         ><img src="../assets/logo-white.svg" alt=""
       /></a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -70,14 +70,25 @@
       id="expense-header"></div>
       <div class="row d-flex justify-content-between gap-3 mt-5">
         <div class="col">
-          <p>João</p>
+          <div class="frame-parent1">
+            <div class="greeting-container">
+              <div class="text-container">
+                <h1 class="greeting-text">Categorias</h1>
+              </div>
+              <div class="rotated-border"></div>
+              <div class="image-container">
+                <img class="first-image" src="/assets/first-image.png" />
+                <img class="second-image" src="/assets/second-image.png" />
+              </div>
+            </div>
+          </div>
         </div>
           <div class="col-para-dois">
-            <div class="custom-card">
+            <div id="blocked" class="custom-card">
               <img src="../assets/categorias.svg" alt="Novo Relatório" />
               <span>Nova Categoria</span>
             </div>
-            <div class="custom-card pesquisar">
+            <div id="blocked" class="custom-card pesquisar">
               <img src="../assets/pesquisar.svg" alt="Pesquisar" />
               <span>Pesquisar</span>
             </div>
@@ -223,5 +234,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+<script>
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+    </script>
   </body>
 </html>

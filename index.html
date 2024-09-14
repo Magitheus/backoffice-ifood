@@ -19,7 +19,6 @@
     <title>Backoffice | Login</title>
   </head>
   <body>
-    <div id="circle"></div>
     <main>
       <img src="./assets/ifood-logo.jpg" alt="logo" />
       <div id="line"></div>
@@ -56,6 +55,9 @@
           <button type="submit" id="login">Logar</button>
         </div>
         <a href="#" aria-disabled="true">Esqueceu a senha?</a>
+        <a href="./pages/register.html" aria-disabled="true"
+          >Não tem conta ainda? <strong>Cadastre-se.</strong></a
+        >
         <div class="toast-container position-fixed end-0 p-3">
           <div
             id="liveToast"
@@ -77,13 +79,16 @@
         </div>
       </form>
     </main>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlElement.setAttribute("data-bs-theme", savedTheme);
+    </script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
-<!-- 492px x 675px -->

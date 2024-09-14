@@ -129,7 +129,6 @@ a {
   color: var(--bs-gray-light);
   font-size: 1.9rem;
   line-height: 2.8rem;
-  cursor: not-allowed;
 }
 
 #liveToast {
