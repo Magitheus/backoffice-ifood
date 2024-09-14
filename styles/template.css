@@ -593,3 +593,121 @@ details button {
   font-size: 2.95rem;
   font-weight: 500;
 }
+
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-box {
+  width: 65.6rem;
+  height: 102.4rem;
+  position: relative;
+  background: #fff;
+  box-shadow: -0.3rem 0.6rem 0.85rem 0.1rem var(--bs-box-shadow);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.edit-close-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 13.3rem;
+  left: 60.3rem;
+  background-color: var(--bs-primary);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-close-button:hover {
+  background-color: #c71620;
+}
+
+.edit-close-button:focus {
+  outline: none;
+}
+
+.edit-box h1 {
+  position: absolute;
+  left: 1.8rem;
+  top: 11.5rem;
+  color: var(--bs-gray);
+  font-size: 4.84rem;
+  font-weight: 700;
+  line-height: 7rem;
+  word-wrap: break-word;
+}
+
+.save-button {
+  position: absolute;
+  width: 22.7rem;
+  height: 5.2rem;
+  left: 41.1rem;
+  top: 91.5rem;
+  background: var(--bs-primary);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.985rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.save-button:hover {
+  background-color: #c71620;
+  color: white;
+}
+
+.save-button:focus {
+  outline: none;
+}
+
+.delete-button {
+  position: absolute;
+  width: 22.7rem;
+  height: 5.2rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  left: 14.6rem;
+  top: 91.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--bs-primary);
+  color: var(--bs-primary);
+  font-size: 1.985rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.delete-button:hover {
+  background-color: #f2f2f2; 
+  border-color: #c71620; 
+}
+
+.delete-button:focus {
+  outline: none;
+}
