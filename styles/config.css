@@ -34,7 +34,7 @@ html {
   --bs-gray-light: hsl(0, 0%, 44%);
   --bs-green: hsl(112, 100%, 27%);
   --bs-red-200: hsl(349, 100%, 27%);
-  --bs-box-shadow: hsla(0, 0%, 0%, 0.08);
+  --bs-box-shadow: hsla(0, 0%, 60%, 0.08);
   --bs-black: #fff;
   --bs-white: #000;
 }
