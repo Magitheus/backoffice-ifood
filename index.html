@@ -15,9 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="../assets/logo-white.svg" type="image/svg+xml" />
-
-    <link rel="icon" href="../assets/logo-white.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/logo-white.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/index.css" />
     <title>Backoffice | Login</title>
   </head>
@@ -25,7 +23,7 @@
     <main>
       <img src="./assets/ifood-logo.jpg" alt="logo" />
       <div id="line"></div>
-      <form id="form">
+      <form id="form" novalidate>
         <h1>Login</h1>
         <div class="input">
           <label for="email">E-mail</label>
@@ -43,8 +41,8 @@
             id="senha"
             placeholder="Insira sua senha"
             required
-            minlength="8"
           />
+          <div id="error-message" class="text-danger" style="display: none;"></div>
         </div>
         <div id="remember">
           <input type="checkbox" name="" id="remember-password" />
@@ -55,9 +53,6 @@
           <button type="submit" id="login">Logar</button>
         </div>
         <a href="#" aria-disabled="true">Esqueceu a senha?</a>
-        <a href="./pages/register.html" aria-disabled="true"
-          >Não tem conta ainda? <strong>Cadastre-se.</strong></a
-        >
         <div class="toast-container position-fixed end-0 p-3">
           <div
             id="liveToast"
@@ -85,10 +80,27 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const htmlElement = document.documentElement;
-      const savedTheme = localStorage.getItem("theme") || "light";
-      htmlElement.setAttribute("data-bs-theme", savedTheme);
+      document.getElementById('create').addEventListener('click', function () {
+        window.location.href = './pages/register.html'; 
+      });
+
+      document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+
+        const userData = JSON.parse(localStorage.getItem('userData'));
+
+        if (userData && userData.email === email && userData.senha === senha) {
+          window.location.href = './pages/dashboard.html';
+        } else {
+
+          const errorMessage = document.getElementById('error-message');
+          errorMessage.textContent = 'E-mail ou senha inválidos.';
+          errorMessage.style.display = 'block';
+        }
+      });
     </script>
-    <script src="./scripts/main.js"></script>
   </body>
 </html>

@@ -593,3 +593,67 @@ details button {
   font-size: 2.95rem;
   font-weight: 500;
 }
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--bs-gray-light);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.btn-close {
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.form-control,
+.form-select {
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+.form-control::placeholder {
+  color: var(--bs-gray-light);
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #ea1d2c;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #c71620;
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    padding: 1rem;
+  }
+}
