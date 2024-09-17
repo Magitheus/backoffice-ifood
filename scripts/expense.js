@@ -10,6 +10,8 @@ function carregarTransacoes() {
     .catch((error) => console.error("Erro ao carregar o JSON:", error));
 }
 
+carregarTransacoes()
+
 function renderizarTransacoes(transacoes) {
   const tableBody = document.querySelector("table tbody");
   tableBody.innerHTML = "";
@@ -73,7 +75,8 @@ function renderizarTransacoes(transacoes) {
     row.appendChild(conta);
 
     const valor = document.createElement("td");
-    valor.textContent = transacao.valor;
+    let valorFormatado = transacao.valor.toFixed(2).replace('.', ',');
+    valor.textContent =  `R$ ${valorFormatado}`;
     row.appendChild(valor);
 
     const statusTd = document.createElement("td");

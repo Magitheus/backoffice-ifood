@@ -27,7 +27,7 @@
       "status": "on",
       "alerta": {
         "mensagem": "Entrada via App Parceiros",
-        "imagem": "/assets/AppParceiros.svg"
+        "imagem": "../assets/AppParceiros.svg"
       }
     },
     {
@@ -57,7 +57,7 @@
       "status": "on",
       "alerta": {
         "mensagem": "Entrada via App Parceiros",
-        "imagem": "/assets/AppParceiros.svg"
+        "imagem": "../assets/AppParceiros.svg"
       }
     },
     {
@@ -100,7 +100,7 @@
       "status": "on",
       "alerta": {
         "mensagem": "Esse produto está em promoção no iFood Shop",
-        "imagem": "/assets/iFoodShop.svg"
+        "imagem": "../assets/iFoodShop.svg"
       }
     },
     {
@@ -143,7 +143,7 @@
       "status": "on",
       "alerta": {
         "mensagem": "Esta despesa teve uma aumento em comparação anteriores",
-        "imagem": "/assets/Stonks.svg"
+        "imagem": "../assets/Stonks.svg"
       }
     }
   ]

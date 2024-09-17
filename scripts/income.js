@@ -23,19 +23,15 @@ function renderizarTransacoes(transacoes) {
 
     const dia = document.createElement("th");
     dia.textContent = transacao.dia;
-    if (!diasMarcados[transacao.dia]) {
-      dia.style.color = "var(--bs-red)";
-      diasMarcados[transacao.dia] = true;
-    } else {
-      dia.style.color = "var(--bs-red)";
-    }
+    dia.style.color = "#128900";
+    row.style.borderColor = "#128900";
     row.appendChild(dia);
 
     const descricaoTd = document.createElement("td");
     const descricaoP = document.createElement("p");
     descricaoP.textContent = transacao.descricao;
     const pagoParaP = document.createElement("p");
-    pagoParaP.textContent = `Pago para: ${transacao.pagoPara}`;
+    pagoParaP.textContent = `Pago por: ${transacao.pagoPara}`;
     descricaoTd.appendChild(descricaoP);
     descricaoTd.appendChild(pagoParaP);
 
@@ -74,7 +70,8 @@ function renderizarTransacoes(transacoes) {
     row.appendChild(conta);
 
     const valor = document.createElement("td");
-    valor.textContent = transacao.valor;
+    let valorFormatado = transacao.valor.toFixed(2).replace('.', ',');
+    valor.textContent =  `R$ ${valorFormatado}`;
     row.appendChild(valor);
 
     const statusTd = document.createElement("td");
