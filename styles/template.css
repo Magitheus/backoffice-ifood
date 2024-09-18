@@ -682,7 +682,7 @@ details button {
 }
 
 .form-label {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   font-weight: 500;
 }
 
@@ -751,7 +751,7 @@ details button {
   margin-top: 11.5rem;
   width: 62rem;
   height: 64rem;
-  background-color: #676767;
+  background-color: var(--bs-white);
 }
 
 #header-overlay {
@@ -759,12 +759,12 @@ details button {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  margin-bottom: 6.6rem;
 }
 
 .edit-box form label {
   color: var(--bs-black);
-
-  font-size: 18.906px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -791,13 +791,15 @@ details button {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  margin-top: 10px;
 }
 
 .form-box-2 {
   display: flex;
   align-items: flex-end;
-  gap: 41px;
+  gap: 15px;
   align-self: stretch;
+  margin-top: 10px;
 }
 
 .form-box-left {
@@ -805,7 +807,7 @@ details button {
   width: 300px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 19px;
+  gap: 10px;
 }
 
 .form-box-right {
@@ -813,14 +815,14 @@ details button {
   width: 300px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 19px;
+  gap: 10px;
 }
 
 .form-box-button {
   display: flex;
   align-items: center;
   gap: 38px;
-  justify-content: right;
+  justify-content: center;
   margin-top: 6.6rem;
 }
 
@@ -829,16 +831,26 @@ details button {
   width: 145px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 17px;
+  gap: 10px;
 }
 
 .form-status {
   display: flex;
-  width: 94px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
 }
+
+.form-status label {
+  font-size: 13px !important;
+}
+
+.form-status input[type="radio"] {
+  width: 30px;  /* Ajuste o valor para o tamanho desejado */
+  height: 30px; /* Ajuste o valor para o tamanho desejado */
+}
+
 
 .edit-close-button {
   width: 3.5rem;
@@ -882,7 +894,7 @@ details button {
   gap: 16px;
   background: var(--bs-primary);
   border-radius: 0.5rem;
-  color: var(--bs-black);
+  color: var(--bs-white);
   font-size: 1.985rem;
   font-weight: 400;
   line-height: 2.8rem;
@@ -890,8 +902,8 @@ details button {
 } 
 
 .save-button:hover {
-  background-color: var(--bs-primary);
-  color: var(--bs-black);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
 }
 
 .save-button:focus {
@@ -905,7 +917,7 @@ details button {
   padding-right: 3.2rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
-  background: var(--bs-black);
+  background: var(--bs-white);
   border-radius: 0.5rem;
   border: 0.2rem solid var(--bs-primary);
   color: var(--bs-primary);
@@ -919,8 +931,9 @@ details button {
 }
 
 .delete-button:hover {
-  background-color: var(--bs-white);
+  background-color: var(--bs-primary);
   border-color: var(--bs-primary);
+  color: var(--bs-white);
 }
 
 .delete-button:focus {

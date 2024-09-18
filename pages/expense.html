@@ -249,11 +249,10 @@
             </div>
 
             <div class="form-status">
-              <label>Status</label>
               <input type="radio" id="pago" name="status" value="pago" />
               <label for="pago">Pago</label>
               <input type="radio" id="a-pagar" name="status" value="a_pagar" />
-              <label for="a-pagar">A pagar</label>
+              <label for="a-pagar">Pendente</label>
             </div>
           </div>
 
@@ -354,7 +353,7 @@
                     value="pending"
                   />
                   <label class="form-check-label" for="statusPending">
-                    A Pagar
+                    Pendente
                   </label>
                 </div>
               </div>
@@ -416,7 +415,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const filterCard = document.querySelector(".custom-card:nth-child(2)"); // Se o botão "Criar Filtro" for o segundo
+        const filterCard = document.querySelector(".custom-card:nth-child(2)");
         const filterModal = new bootstrap.Modal(
           document.getElementById("filterModal")
         );
