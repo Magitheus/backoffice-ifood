@@ -124,9 +124,9 @@
         </div>
         <div class="notificacoes">
           <h1>Notificações</h1>
-          <p>Despesas recorrentes/</p>
+          <!-- <p>Despesas recorrentes/</p>
           <p>Aumento de Despesas/</p>
-          <p>Desconto na antecipação/</p>
+          <p>Desconto na antecipação/</p> -->
         </div>
       </div>
     </div>
@@ -208,26 +208,26 @@
           </div>
 
           <div class="form-box">
-            <div class="form-left">
+            <div class="form-box-left">
               <label for="descricao">Descrição</label>
               <input type="text" id="descricao" name="descricao" />
             </div>
-          
-            <div class="form-right">
+
+            <div class="form-box-right">
               <label for="pagador">Pagador</label>
               <input type="text" id="pagador" name="pagador" />
             </div>
           </div>
 
           <div class="form-box">
-            <div class="form-left">
+            <div class="form-box-left">
               <label for="loja">Loja</label>
               <select id="loja" name="loja">
                 <option value="restaurante">Restaurante</option>
               </select>
             </div>
-            
-            <div class="form-right">
+
+            <div class="form-box-right">
               <label for="categoria">Categoria</label>
               <select id="categoria" name="categoria">
                 <option value="imovel_aluguel">Imóvel/Aluguel</option>
@@ -235,8 +235,8 @@
             </div>
           </div>
 
-          <div class="form-box-2">     
-            <div class="form-left">
+          <div class="form-box-2">
+            <div class="form-box-left">
               <label for="conta">Conta</label>
               <select id="conta" name="conta">
                 <option value="itau">Itaú</option>
@@ -247,7 +247,7 @@
               <label for="valor">Valor</label>
               <input type="text" id="valor" name="valor" />
             </div>
-            
+
             <div class="form-status">
               <label>Status</label>
               <input type="radio" id="pago" name="status" value="pago" />
@@ -257,10 +257,12 @@
             </div>
           </div>
 
-          <button type="submit" class="save-button">Salvar</button>
-          <button type="button" class="form-button delete-button">
-            Excluir
-          </button>
+          <div class="form-box-button">
+            <button type="button" class="form-button delete-button">
+              Excluir
+            </button>
+            <button type="submit" class="save-button">Salvar</button>
+          </div>
         </form>
       </div>
     </div>
@@ -285,7 +287,6 @@
           </div>
           <div class="modal-body">
             <form id="filterForm">
-
               <div class="mb-3">
                 <label for="filterDateStart" class="form-label">Data: De</label>
                 <input type="date" class="form-control" id="filterDateStart" />
@@ -304,9 +305,7 @@
                 />
               </div>
               <div class="mb-3">
-                <div>
-                  
-                </div>
+                <div></div>
                 <label for="filterStore" class="form-label">Loja</label>
                 <select class="form-select" id="filterStore">
                   <option selected>Escolha...</option>
@@ -371,7 +370,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/expense.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="../scripts/expense.js"></script>
     <script>
       const htmlElement = document.documentElement;
       const savedTheme = localStorage.getItem("theme") || "light";
@@ -382,6 +388,7 @@
         const searchCard = document.querySelector(".custom-card.pesquisar");
         const searchOverlay = document.getElementById("search-overlay");
         const closeButton = document.querySelector(".close-button");
+        const searchButton = document.querySelector(".search-button");
 
         searchCard.addEventListener("click", function () {
           searchOverlay.style.display = "flex";
@@ -389,6 +396,11 @@
         });
 
         closeButton.addEventListener("click", function () {
+          searchOverlay.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        searchButton.addEventListener("click", function () {
           searchOverlay.style.display = "none";
           document.body.style.overflow = "auto";
         });

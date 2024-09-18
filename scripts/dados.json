@@ -143,7 +143,7 @@
       "status": "on",
       "alerta": {
         "mensagem": "Esta despesa teve uma aumento em comparação anteriores",
-        "imagem": "../assets/Stonks.svg"
+        "imagem": "../assets/stonks.svg"
       }
     }
   ]

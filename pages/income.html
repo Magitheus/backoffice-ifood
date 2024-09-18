@@ -118,7 +118,7 @@
             />
             <span>Incluir Receita</span>
           </div>
-          <div id="blocked" class="custom-card incluir-despesa">
+          <div class="custom-card incluir-despesa">
             <img src="../assets/filtro.svg" alt="Criar Filtro" />
             <span>Criar Filtro</span>
           </div>
@@ -316,6 +316,7 @@
         const searchCard = document.querySelector(".custom-card.pesquisar");
         const searchOverlay = document.getElementById("search-overlay");
         const closeButton = document.querySelector(".close-button");
+        const searchButton = document.querySelector(".search-button");
 
         searchCard.addEventListener("click", function () {
           searchOverlay.style.display = "flex";
@@ -323,6 +324,11 @@
         });
 
         closeButton.addEventListener("click", function () {
+          searchOverlay.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        searchButton.addEventListener("click", function () {
           searchOverlay.style.display = "none";
           document.body.style.overflow = "auto";
         });

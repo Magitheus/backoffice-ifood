@@ -1,3 +1,7 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+const API_KEY = "";
+const genAI = new GoogleGenerativeAI(API_KEY);
+
 function carregarTransacoes() {
   fetch("../scripts/dados.json")
     .then((response) => response.json())
@@ -5,12 +9,100 @@ function carregarTransacoes() {
       const saida = data.transacoes.filter(
         (transacao) => transacao.tipo === "saida"
       );
+      const dadosGemini = prepararDadosParaGemini(saida);
+      // chamarGemini(dadosGemini);
       renderizarTransacoes(saida);
     })
     .catch((error) => console.error("Erro ao carregar o JSON:", error));
 }
 
-carregarTransacoes()
+function prepararDadosParaGemini(transacoes) {
+  const despesas = transacoes;
+
+  const dadosFormatados = {
+    despesas: despesas.map((despesa) => ({
+      data: despesa.data,
+      descricao: despesa.descricao,
+      valor: despesa.valor,
+      categoria: despesa.categoria,
+    })),
+  };
+
+  return dadosFormatados;
+}
+
+function exibirInsights(insights) {
+  const notificacoesDiv = document.querySelector(".notificacoes");
+
+  // Limpar as notificações anteriores
+  notificacoesDiv.innerHTML = "<h1>Notificações</h1>";
+
+  // Adicionar cada insight como uma nova notificação
+  insights.forEach((insight) => {
+    const p = document.createElement("p");
+    p.textContent = `${insight.tipo}: ${insight.mensagem}`;
+    notificacoesDiv.appendChild(p);
+  });
+}
+
+async function chamarGemini(dados) {
+  // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  const prompt = `
+You are given the following financial transactions data:
+
+
+[
+  { "data": "2023-10-26", "valor": 100.00, "descricao": "Pagamento de conta de luz", "categoria": "Despesas" },
+  { "data": "2023-10-27", "valor": 50.00, "descricao": "Compra de alimentos", "categoria": "Despesas" },
+  { "data": "2023-10-28", "valor": 200.00, "descricao": "Salário", "categoria": "Renda" }
+]
+
+Generate financial insights based on these transactions. Each insight should include:
+- "tipo" (the type of insight, e.g., "Aviso", "Informação", "Alerta").
+- "mensagem" (a message describing the insight).
+
+Return the insights in the following JSON format, and provide the response in Portuguese (Brazil):
+
+[
+  { "tipo": "Aviso", "mensagem": "Some warning based on the transaction data" },
+  { "tipo": "Informação", "mensagem": "Some informational insight based on the transaction data" },
+  { "tipo": "Alerta", "mensagem": "Some alert based on the transaction data" }
+]
+`;
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  const text = response.text();
+  console.log(text);
+  // Função para limpar a string JSON
+  function cleanJsonString(jsonString) {
+    // Remove os acentos graves e outras possíveis partes não desejadas
+    const cleanedString = jsonString
+      .replace(/```json/, "") // Remove a linha inicial ```json
+      .replace(/```/, "") // Remove a linha final ```
+      .trim(); // Remove espaços em branco extras
+
+    return cleanedString;
+  }
+
+  // Limpar a string JSON
+  const cleanJson = cleanJsonString(text);
+
+  // Converter a string JSON limpa em um objeto JavaScript
+  let insights;
+  try {
+    insights = JSON.parse(cleanJson);
+    console.log(insights);
+    // Chama a função para exibir os insights
+    exibirInsights(insights);
+  } catch (error) {
+    console.error("Erro ao processar o JSON:", error);
+  }
+}
+
+carregarTransacoes();
 
 function renderizarTransacoes(transacoes) {
   const tableBody = document.querySelector("table tbody");
@@ -75,8 +167,8 @@ function renderizarTransacoes(transacoes) {
     row.appendChild(conta);
 
     const valor = document.createElement("td");
-    let valorFormatado = transacao.valor.toFixed(2).replace('.', ',');
-    valor.textContent =  `R$ ${valorFormatado}`;
+    let valorFormatado = transacao.valor.toFixed(2).replace(".", ",");
+    valor.textContent = `R$ ${valorFormatado}`;
     row.appendChild(valor);
 
     const statusTd = document.createElement("td");
@@ -96,14 +188,18 @@ function renderizarTransacoes(transacoes) {
     optionsBtn.appendChild(optionsIcon);
 
     function toggleOverlay(display) {
-      document.querySelector('.edit-overlay').style.display = display ? 'flex' : 'none';
+      document.querySelector(".edit-overlay").style.display = display
+        ? "flex"
+        : "none";
     }
 
-    optionsBtn.addEventListener('click', () => toggleOverlay(true));
-    document.querySelector('.edit-close-button').addEventListener('click', () => toggleOverlay(false));
+    optionsBtn.addEventListener("click", () => toggleOverlay(true));
+    document
+      .querySelector(".edit-close-button")
+      .addEventListener("click", () => toggleOverlay(false));
 
-    window.addEventListener('click', (event) => {
-      if (event.target.classList.contains('edit-overlay')) toggleOverlay(false);
+    window.addEventListener("click", (event) => {
+      if (event.target.classList.contains("edit-overlay")) toggleOverlay(false);
     });
 
     optionsBtn.appendChild(optionsIcon);
