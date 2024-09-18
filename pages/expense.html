@@ -109,7 +109,7 @@
             <img src="../assets/despesa-red.svg" alt="Nova Despesa" />
             <span>Nova Despesa</span>
           </div>
-          <div id="blocked" class="custom-card">
+          <div class="custom-card">
             <img src="../assets/filtro.svg" alt="Criar Filtro" />
             <span>Criar Filtro</span>
           </div>
@@ -187,7 +187,9 @@
             class="search-input"
             placeholder="Digite sua pesquisa..."
           />
-          <button onclick="filtrarTransacoes()" class="search-button">Pesquisar</button>
+          <button onclick="filtrarTransacoes()" class="search-button">
+            Pesquisar
+          </button>
         </div>
       </div>
     </div>
@@ -195,36 +197,116 @@
     <div class="edit-overlay">
       <div class="edit-box">
         <form>
-          <button type="button" class="edit-close-button">X</button>
-          <h1>Editar Despesa</h1>
+          <div id="header-overlay">
+            <h1>Editar Despesa</h1>
+            <button type="button" class="edit-close-button">X</button>
+          </div>
+
+          <div class="form-data">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" />
+          </div>
+
+          <div class="form-box">
+            <div class="form-left">
+              <label for="descricao">Descrição</label>
+              <input type="text" id="descricao" name="descricao" />
+            </div>
+          
+            <div class="form-right">
+              <label for="pagador">Pagador</label>
+              <input type="text" id="pagador" name="pagador" />
+            </div>
+          </div>
+
+          <div class="form-box">
+            <div class="form-left">
+              <label for="loja">Loja</label>
+              <select id="loja" name="loja">
+                <option value="restaurante">Restaurante</option>
+              </select>
+            </div>
+            
+            <div class="form-right">
+              <label for="categoria">Categoria</label>
+              <select id="categoria" name="categoria">
+                <option value="imovel_aluguel">Imóvel/Aluguel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-box-2">     
+            <div class="form-left">
+              <label for="conta">Conta</label>
+              <select id="conta" name="conta">
+                <option value="itau">Itaú</option>
+              </select>
+            </div>
+
+            <div class="form-valor">
+              <label for="valor">Valor</label>
+              <input type="text" id="valor" name="valor" />
+            </div>
+            
+            <div class="form-status">
+              <label>Status</label>
+              <input type="radio" id="pago" name="status" value="pago" />
+              <label for="pago">Pago</label>
+              <input type="radio" id="a-pagar" name="status" value="a_pagar" />
+              <label for="a-pagar">A pagar</label>
+            </div>
+          </div>
+
           <button type="submit" class="save-button">Salvar</button>
-          <button type="button" class="form-button delete-button">Excluir</button>
+          <button type="button" class="form-button delete-button">
+            Excluir
+          </button>
         </form>
       </div>
     </div>
 
-    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="filterModal"
+      tabindex="-1"
+      aria-labelledby="filterModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="filterModalLabel">Criar Filtro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="filterModalLabel">Filtro</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <form id="filterForm">
+
               <div class="mb-3">
                 <label for="filterDateStart" class="form-label">Data: De</label>
-                <input type="date" class="form-control" id="filterDateStart">
+                <input type="date" class="form-control" id="filterDateStart" />
               </div>
               <div class="mb-3">
                 <label for="filterDateEnd" class="form-label">Até</label>
-                <input type="date" class="form-control" id="filterDateEnd">
+                <input type="date" class="form-control" id="filterDateEnd" />
               </div>
               <div class="mb-3">
                 <label for="filterReceiver" class="form-label">Recebedor</label>
-                <input type="text" class="form-control" id="filterReceiver" placeholder="Nome do recebedor">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="filterReceiver"
+                  placeholder="Nome do recebedor"
+                />
               </div>
               <div class="mb-3">
+                <div>
+                  
+                </div>
                 <label for="filterStore" class="form-label">Loja</label>
                 <select class="form-select" id="filterStore">
                   <option selected>Escolha...</option>
@@ -247,19 +329,31 @@
                   <option selected>Escolha...</option>
                   <option value="itau">Itaú</option>
                   <option value="bradesco">Bradesco</option>
-                  <option value="nubank">Nu Bank</option>
+                  <option value="nubank">Nubank</option>
                 </select>
               </div>
               <div class="mb-3">
                 <label class="form-label">Status</label>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="filterStatus" id="statusPaid" value="paid">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="filterStatus"
+                    id="statusPaid"
+                    value="paid"
+                  />
                   <label class="form-check-label" for="statusPaid">
                     Pago
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="filterStatus" id="statusPending" value="pending">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="filterStatus"
+                    id="statusPending"
+                    value="pending"
+                  />
                   <label class="form-check-label" for="statusPending">
                     A Pagar
                   </label>
@@ -308,16 +402,17 @@
       });
     </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterCard = document.querySelector(".custom-card:nth-child(2)"); // Se o botão "Criar Filtro" for o segundo
-    const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterCard = document.querySelector(".custom-card:nth-child(2)"); // Se o botão "Criar Filtro" for o segundo
+        const filterModal = new bootstrap.Modal(
+          document.getElementById("filterModal")
+        );
 
-    filterCard.addEventListener("click", function () {
-      filterModal.show();
-    });
-  });
-</script>
-
+        filterCard.addEventListener("click", function () {
+          filterModal.show();
+        });
+      });
+    </script>
   </body>
 </html>

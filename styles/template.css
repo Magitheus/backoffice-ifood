@@ -190,8 +190,8 @@ tbody tr td span {
   position: absolute;
   top: 16px;
   right: 16px;
-  background-color: #ea1d2c;
-  color: white;
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
   font-size: 10px;
   font-weight: bold;
   border: none;
@@ -737,22 +737,106 @@ details button {
 
 .edit-box {
   width: 65.6rem;
-  height: 102.4rem;
+  height: 100dvh;
   position: relative;
-  background: #fff;
+  background: var(--bs-white);
   box-shadow: -0.3rem 0.6rem 0.85rem 0.1rem var(--bs-box-shadow);
   border-radius: 1.2rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-box form {
+  margin-top: 11.5rem;
+  width: 62rem;
+  height: 64rem;
+  background-color: #676767;
+}
+
+#header-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.edit-box form label {
+  color: var(--bs-black);
+
+  font-size: 18.906px;
+  font-weight: 700;
+}
+
+.edit-box form input,
+.edit-box form select {
+  display: flex;
+  height: 38px;
+  padding: 9px 11px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--bs-gray-light);
+  background: var(--bs-white);
+
+  color: var(--bs-black);
+
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.form-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.form-box-2 {
+  display: flex;
+  align-items: flex-end;
+  gap: 41px;
+  align-self: stretch;
+}
+
+.form-left {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+}
+
+.form-right {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+}
+
+.form-valor {
+  display: flex;
+  width: 145px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.form-status {
+  display: flex;
+  width: 94px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .edit-close-button {
   width: 3.5rem;
   height: 3.5rem;
-  position: absolute;
-  top: 13.3rem;
-  left: 60.3rem;
   background-color: var(--bs-primary);
-  color: #fff;
+  color: var(--bs-white);
   font-size: 1.6rem;
   font-weight: bold;
   border: none;
@@ -764,7 +848,7 @@ details button {
 }
 
 .edit-close-button:hover {
-  background-color: #c71620;
+  background-color: var(--bs-primary);
 }
 
 .edit-close-button:focus {
@@ -772,9 +856,6 @@ details button {
 }
 
 .edit-box h1 {
-  position: absolute;
-  left: 1.8rem;
-  top: 11.5rem;
   color: var(--bs-gray);
   font-size: 4.84rem;
   font-weight: 700;
@@ -783,26 +864,26 @@ details button {
 }
 
 .save-button {
-  position: absolute;
+  display: flex;
   width: 22.7rem;
   height: 5.2rem;
-  left: 41.1rem;
-  top: 91.5rem;
+  padding: 12px 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   background: var(--bs-primary);
   border-radius: 0.5rem;
-  color: white;
+  color: var(--bs-black);
   font-size: 1.985rem;
   font-weight: 400;
   line-height: 2.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .save-button:hover {
-  background-color: #c71620;
-  color: white;
+  background-color: var(--bs-primary);
+  color: var(--bs-black);
 }
 
 .save-button:focus {
@@ -810,16 +891,13 @@ details button {
 }
 
 .delete-button {
-  position: absolute;
   width: 22.7rem;
   height: 5.2rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
-  left: 14.6rem;
-  top: 91.5rem;
-  background: white;
+  background: var(--bs-black);
   border-radius: 0.5rem;
   border: 0.2rem solid var(--bs-primary);
   color: var(--bs-primary);
@@ -833,10 +911,92 @@ details button {
 }
 
 .delete-button:hover {
-  background-color: #f2f2f2;
-  border-color: #c71620;
+  background-color: var(--bs-white);
+  border-color: var(--bs-primary);
 }
 
 .delete-button:focus {
   outline: none;
+}
+#filterModal .modal-content {
+  background-color: var(--bs-white);
+  display: inline-flex;
+  padding: 32px 38.563px 35px 41px;
+  justify-content: center;
+  align-items: center;
+  width: 56rem;
+  flex-direction: column;
+  gap: 51px;
+}
+
+#filterModal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+#filterModal .modal-title {
+  color: var(--bs-black);
+  font-size: 3.7rem;
+  font-weight: 700;
+}
+
+#filterModal .modal-body {
+  display: flex;
+  width: 55.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.3rem;
+}
+#filterModal .form-label {
+  color: var(--bs-black);
+  font-size: 1.89rem;
+  font-weight: 700;
+}
+
+#filterModal .form-control,
+#filterModal .form-select {
+  display: flex;
+  min-width: 9.4rem;
+  max-width: 28.2rem;
+  padding: 0.9rem 1.1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--bs-gray);
+  background: var(--bs-white);
+}
+#filterForm {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: start;
+}
+#filterForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#filterForm .form-check {
+  align-items: center;
+  flex-direction: row;
+}
+
+#filterForm button {
+  display: flex;
+  width: 22.7rem;
+  padding: 1.2rem 3.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 0.5rem;
+  background: var(--bs-primary);
+  color: var(--bs-black);
+  font-size: 1.89rem;
+  font-weight: 700;
 }
