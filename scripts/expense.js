@@ -92,6 +92,20 @@ function renderizarTransacoes(transacoes) {
     const optionsBtn = document.createElement("button");
     const optionsIcon = document.createElement("i");
     optionsIcon.classList.add("bi", "bi-three-dots-vertical");
+
+    optionsBtn.appendChild(optionsIcon);
+
+    function toggleOverlay(display) {
+      document.querySelector('.edit-overlay').style.display = display ? 'flex' : 'none';
+    }
+
+    optionsBtn.addEventListener('click', () => toggleOverlay(true));
+    document.querySelector('.edit-close-button').addEventListener('click', () => toggleOverlay(false));
+
+    window.addEventListener('click', (event) => {
+      if (event.target.classList.contains('edit-overlay')) toggleOverlay(false);
+    });
+
     optionsBtn.appendChild(optionsIcon);
     statusTd.appendChild(optionsBtn);
 
