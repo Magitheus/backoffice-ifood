@@ -67,3 +67,34 @@ function showToast(message) {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
   toastBootstrap.show();
 }
+
+  document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita o envio do formulário padrão
+
+    // Obtém os valores dos campos
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    // Obtém os dados armazenados no localStorage
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData) {
+      // Verifica se os dados de login correspondem aos armazenados
+      if (userData.email === email && userData.senha === senha) {
+        window.location.href = './dashboard.html'; // Redireciona para a página de dashboard ou outra página apropriada
+      } else {
+        showToast('E-mail ou senha incorretos');
+      }
+    } else {
+      showToast('Nenhum usuário encontrado');
+    }
+  });
+
+  function showToast(message) {
+    const toastLiveExample = document.getElementById('liveToast');
+    const toastBody = toastLiveExample.querySelector('.toast-body');
+    toastBody.textContent = message;
+
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+    toastBootstrap.show();
+  }

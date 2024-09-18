@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../assets/logo-white.svg" type="image/svg+xml" />
-
     <link rel="stylesheet" href="../styles/register.css" />
     <title>Backoffice | Cadastro</title>
   </head>
@@ -43,11 +42,20 @@
           <label for="tel">Celular (com DDD)</label>
           <input type="tel" id="tel" placeholder="(99) 99999-9999" required />
         </div>
+        <div class="input">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder="Insira sua senha"
+            required
+          />
+        </div>
         <div id="buttons">
-          <button type="submit" id="login" value="../index.html">
+          <button type="button" id="loginButton">
             Já sou parceiro
           </button>
-          <button type="submit" id="acess" value="./dashboard.html">
+          <button type="submit" id="registerButton">
             Cadastrar
           </button>
         </div>
@@ -81,63 +89,27 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const htmlElement = document.documentElement;
-      const savedTheme = localStorage.getItem("theme") || "light";
-      htmlElement.setAttribute("data-bs-theme", savedTheme);
-    </script>
-    <script>
-      const toastTrigger = document.getElementById("liveToastBtn");
-      const toastLiveExample = document.getElementById("liveToast");
-      let link;
-
-      let validateEmail = false;
-
-      document.getElementById("email").addEventListener("blur", function () {
-        const emailInput = this;
-
-        setTimeout(() => {
-          const emailValue = emailInput.value;
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(emailValue)) {
-            showToast("E-mail inválido");
-          } else {
-            validateEmail = true;
-          }
-        }, 100);
+      document.getElementById('loginButton').addEventListener('click', function () {
+        window.location.href = '../index.html';
       });
 
-      function nextPage() {
-        const emailInput = document.getElementById("email");
-        const emailValue = emailInput.value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailValue)) {
-          showToast("E-mail inválido");
-        } else {
-          validateEmail = true;
-        }
-
-        if (validateEmail) {
-          window.location.href = link;
-        } else {
-          showToast("E-mail inválido");
-        }
-      }
-
-      document.getElementById("form").addEventListener("submit", (event) => {
+      document.getElementById('form').addEventListener('submit', function (event) {
         event.preventDefault();
-        link = document.activeElement.value;
-        nextPage();
+
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const tel = document.getElementById('tel').value;
+        const senha = document.getElementById('senha').value;
+
+        localStorage.setItem('userData', JSON.stringify({
+          nome: nome,
+          email: email,
+          tel: tel,
+          senha: senha
+        }));
+
+        window.location.href = '../index.html';
       });
-
-      function showToast(message) {
-        const toastLiveExample = document.getElementById("liveToast");
-        const toastBody = toastLiveExample.querySelector(".toast-body");
-        toastBody.textContent = message;
-
-        const toastBootstrap =
-          bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-        toastBootstrap.show();
-      }
     </script>
   </body>
 </html>
