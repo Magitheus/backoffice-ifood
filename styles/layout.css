@@ -34,7 +34,7 @@
   padding: 1.2rem 3.2rem;
   border-radius: 1.2rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: start;
   gap: 0.8rem;
   align-self: stretch;
