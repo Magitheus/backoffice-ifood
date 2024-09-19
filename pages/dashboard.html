@@ -305,6 +305,42 @@
       const htmlElement = document.documentElement;
       const savedTheme = localStorage.getItem("theme") || "light";
       htmlElement.setAttribute("data-bs-theme", savedTheme);
+
+      function updateGreeting() {
+        // Recupera o userData do localStorage
+        const userDataString = localStorage.getItem("userData");
+
+        if (userDataString) {
+          try {
+            // Converte a string JSON em objeto
+            const userData = JSON.parse(userDataString);
+
+            // Obtém o nome do objeto userData
+            const nome = userData.nome;
+
+            if (nome) {
+              // Seleciona o elemento com a classe 'greeting-text'
+              const greetingElement = document.querySelector(".greeting-text");
+
+              if (greetingElement) {
+                // Atualiza o texto com o nome obtido
+                greetingElement.textContent = `Olá ${nome}!`;
+              } else {
+                console.error(
+                  "Elemento com a classe 'greeting-text' não encontrado."
+                );
+              }
+            } else {
+              console.error("'nome' não encontrado em userData.");
+            }
+          } catch (error) {
+            console.error("Erro ao parsear userData:", error);
+          }
+        } else {
+          console.error("Nenhum userData encontrado no localStorage.");
+        }
+      }
+      updateGreeting();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>

@@ -133,9 +133,6 @@
         </div>
         <div class="notificacoes">
           <h1>Notificações</h1>
-          <p>Entradas recorrentes/</p>
-          <p>Aumento de Receita Hamburguer/</p>
-          <p>Pagamento ifood/</p>
         </div>
       </div>
     </div>
@@ -200,6 +197,78 @@
             Pesquisar
           </button>
         </div>
+      </div>
+    </div>
+
+    <div class="edit-overlay">
+      <div class="edit-box">
+        <form>
+          <div id="header-overlay">
+            <h1>Editar Despesa</h1>
+            <button type="button" class="edit-close-button">X</button>
+          </div>
+
+          <div class="form-data">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" />
+          </div>
+
+          <div class="form-box">
+            <div class="form-box-left">
+              <label for="descricao">Descrição</label>
+              <input type="text" id="descricao" name="descricao" />
+            </div>
+
+            <div class="form-box-right">
+              <label for="pagador">Pagador</label>
+              <input type="text" id="pagador" name="pagador" />
+            </div>
+          </div>
+
+          <div class="form-box">
+            <div class="form-box-left">
+              <label for="loja">Loja</label>
+              <select id="loja" name="loja">
+                <option value="restaurante">Restaurante</option>
+              </select>
+            </div>
+
+            <div class="form-box-right">
+              <label for="categoria">Categoria</label>
+              <select id="categoria" name="categoria">
+                <option value="imovel_aluguel">Imóvel/Aluguel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-box-2">
+            <div class="form-box-left">
+              <label for="conta">Conta</label>
+              <select id="conta" name="conta">
+                <option value="itau">Itaú</option>
+              </select>
+            </div>
+
+            <div class="form-valor">
+              <label for="valor">Valor</label>
+              <input type="text" id="valor" name="valor" />
+            </div>
+
+            <div class="form-status">
+              <input type="radio" id="pago" name="status" value="pago" />
+              <label for="pago">Pago</label>
+              <input type="radio" id="a-pagar" name="status" value="a_pagar" />
+              <label for="a-pagar">Pendente</label>
+            </div>
+          </div>
+
+          <div class="form-box-button">
+            <button type="button" class="form-button delete-button">
+              Excluir
+            </button>
+            <button type="submit" class="save-button">Salvar</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -305,7 +374,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/income.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="../scripts/income.js"></script>
     <script>
       const htmlElement = document.documentElement;
       const savedTheme = localStorage.getItem("theme") || "light";
@@ -341,7 +417,6 @@
         });
       });
     </script>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const filterCard = document.querySelector(".custom-card:nth-child(2)"); // Se o botão "Criar Filtro" for o segundo

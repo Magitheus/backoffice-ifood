@@ -1,20 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const API_KEY = "";
+const API_KEY = "AIzaSyAyWwERfpeUt6PMikP39bonItyH1izW_A8";
 const genAI = new GoogleGenerativeAI(API_KEY);
-
-function carregarTransacoes() {
-  fetch("../scripts/dados.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const saida = data.transacoes.filter(
-        (transacao) => transacao.tipo === "saida"
-      );
-      const dadosGemini = prepararDadosParaGemini(saida);
-      // chamarGemini(dadosGemini);
-      renderizarTransacoes(saida);
-    })
-    .catch((error) => console.error("Erro ao carregar o JSON:", error));
-}
 
 function prepararDadosParaGemini(transacoes) {
   const despesas = transacoes;
@@ -31,33 +17,13 @@ function prepararDadosParaGemini(transacoes) {
   return dadosFormatados;
 }
 
-function exibirInsights(insights) {
-  const notificacoesDiv = document.querySelector(".notificacoes");
-
-  // Limpar as notificações anteriores
-  notificacoesDiv.innerHTML = "<h1>Notificações</h1>";
-
-  // Adicionar cada insight como uma nova notificação
-  insights.forEach((insight) => {
-    const p = document.createElement("p");
-    p.textContent = `${insight.tipo}: ${insight.mensagem}`;
-    notificacoesDiv.appendChild(p);
-  });
-}
-
 async function chamarGemini(dados) {
-  // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
   const prompt = `
 You are given the following financial transactions data:
 
 
-[
-  { "data": "2023-10-26", "valor": 100.00, "descricao": "Pagamento de conta de luz", "categoria": "Despesas" },
-  { "data": "2023-10-27", "valor": 50.00, "descricao": "Compra de alimentos", "categoria": "Despesas" },
-  { "data": "2023-10-28", "valor": 200.00, "descricao": "Salário", "categoria": "Renda" }
-]
+${JSON.stringify(dados.despesas)}
 
 Generate financial insights based on these transactions. Each insight should include:
 - "tipo" (the type of insight, e.g., "Aviso", "Informação", "Alerta").
@@ -75,34 +41,37 @@ Return the insights in the following JSON format, and provide the response in Po
   const result = await model.generateContent(prompt);
   const response = await result.response;
   const text = response.text();
-  console.log(text);
-  // Função para limpar a string JSON
+
   function cleanJsonString(jsonString) {
-    // Remove os acentos graves e outras possíveis partes não desejadas
     const cleanedString = jsonString
-      .replace(/```json/, "") // Remove a linha inicial ```json
-      .replace(/```/, "") // Remove a linha final ```
-      .trim(); // Remove espaços em branco extras
+      .replace(/```json/, "")
+      .replace(/```/, "")
+      .trim();
 
     return cleanedString;
   }
-
-  // Limpar a string JSON
   const cleanJson = cleanJsonString(text);
 
-  // Converter a string JSON limpa em um objeto JavaScript
   let insights;
   try {
     insights = JSON.parse(cleanJson);
-    console.log(insights);
-    // Chama a função para exibir os insights
     exibirInsights(insights);
   } catch (error) {
     console.error("Erro ao processar o JSON:", error);
   }
 }
 
-carregarTransacoes();
+function exibirInsights(insights) {
+  const notificacoesDiv = document.querySelector(".notificacoes");
+
+  notificacoesDiv.innerHTML = "<h1>Notificações</h1>";
+
+  insights.forEach((insight) => {
+    const p = document.createElement("p");
+    p.textContent = `${insight.tipo}: ${insight.mensagem}`;
+    notificacoesDiv.appendChild(p);
+  });
+}
 
 function renderizarTransacoes(transacoes) {
   const tableBody = document.querySelector("table tbody");
@@ -238,3 +207,157 @@ function filtrarTransacoes() {
 document
   .querySelector(".search-input")
   .addEventListener("input", filtrarTransacoes);
+
+document.addEventListener("DOMContentLoaded", () => {
+  async function carregarTransacoes() {
+    return fetch("../scripts/dados.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const saida = data.transacoes.filter(
+          (transacao) => transacao.tipo === "saida"
+        );
+        const dadosGemini = prepararDadosParaGemini(saida);
+        // chamarGemini(dadosGemini);
+        renderizarTransacoes(saida);
+      })
+      .catch((error) => console.error("Erro ao carregar o JSON:", error));
+  }
+
+  function adicionarEventDelegation() {
+    const tbody = document.querySelector("table tbody");
+
+    if (!tbody) {
+      console.error("Elemento <tbody> não encontrado.");
+      return;
+    }
+
+    tbody.addEventListener("click", (event) => {
+      const target = event.target;
+      const button = target.closest("button");
+
+      if (button && button.querySelector("i.bi-three-dots-vertical")) {
+        const tr = button.closest("tr");
+        if (!tr) {
+          console.error("Linha da tabela não encontrada.");
+          return;
+        }
+
+        const th = tr.querySelector("th");
+        const tds = tr.querySelectorAll("td");
+
+        const numero = th ? th.textContent.trim() : "";
+
+        const descricaoElementos = tds[0].querySelectorAll("p");
+        const descricao = descricaoElementos[0]
+          ? descricaoElementos[0].textContent.trim()
+          : "";
+        const pagoParaTexto = descricaoElementos[1]
+          ? descricaoElementos[1].textContent.trim()
+          : "";
+        const pagador = pagoParaTexto.replace("Pago para: ", "").trim();
+
+        const promocaoElemento = tds[0].querySelector("span");
+        const promocao = promocaoElemento
+          ? promocaoElemento.textContent.trim()
+          : "";
+
+        const categoria = tds[1] ? tds[1].textContent.trim() : "";
+        const tipo = tds[2] ? tds[2].textContent.trim() : "";
+        const banco = tds[3] ? tds[3].textContent.trim() : "";
+        const valorStr = tds[4] ? tds[4].textContent.trim() : "";
+        const valor = parseValor(valorStr);
+
+        const toggleIcon = tds[5].querySelector("i");
+        let status = "";
+        if (toggleIcon) {
+          if (toggleIcon.classList.contains("bi-toggle-on")) {
+            status = "pago";
+          } else if (toggleIcon.classList.contains("bi-toggle-off")) {
+            status = "a_pagar";
+          }
+        }
+
+        preencheFormulario({
+          numero,
+          descricao,
+          pagador,
+          promocao,
+          categoria,
+          tipo,
+          banco,
+          valor,
+          status,
+        });
+      }
+    });
+  }
+
+  function parseValor(valorStr) {
+    return (
+      parseFloat(
+        valorStr.replace("R$", "").replace(/\./g, "").replace(",", ".")
+      ) || 0
+    );
+  }
+
+  function preencheFormulario(dados) {
+    const form = document.querySelector("form");
+    const dataInput = document.getElementById("data");
+    const descricaoInput = document.getElementById("descricao");
+    const pagadorInput = document.getElementById("pagador");
+    const lojaSelect = document.getElementById("loja");
+    const categoriaSelect = document.getElementById("categoria");
+    const contaSelect = document.getElementById("conta");
+    const valorInput = document.getElementById("valor");
+    const statusPagoRadio = document.getElementById("pago");
+    const statusPendenteRadio = document.getElementById("a-pagar");
+
+    const dataAtual = new Date().toISOString().split("T")[0];
+    dataInput.value = dataAtual;
+
+    descricaoInput.value = dados.descricao;
+    pagadorInput.value = dados.pagador;
+
+    lojaSelect.value = lojaSelect.querySelector(
+      `option[value="${dados.categoria.toLowerCase()}"]`
+    )
+      ? dados.categoria.toLowerCase()
+      : lojaSelect.value;
+    categoriaSelect.value = categoriaSelect.querySelector(
+      `option[value="${dados.tipo.toLowerCase().replace(/\s/g, "_")}"]`
+    )
+      ? dados.tipo.toLowerCase().replace(/\s/g, "_")
+      : categoriaSelect.value;
+    contaSelect.value = contaSelect.querySelector(
+      `option[value="${dados.banco.toLowerCase()}"]`
+    )
+      ? dados.banco.toLowerCase()
+      : contaSelect.value;
+
+    valorInput.value = dados.valor.toFixed(2).toString().replace(".", ",");
+
+    if (dados.status === "pago") {
+      statusPagoRadio.checked = true;
+      statusPendenteRadio.checked = false;
+    } else if (dados.status === "a_pagar") {
+      statusPagoRadio.checked = false;
+      statusPendenteRadio.checked = true;
+    } else {
+      statusPagoRadio.checked = false;
+      statusPendenteRadio.checked = false;
+    }
+
+    form.style.display = "block";
+  }
+
+  async function inicializar() {
+    try {
+      await carregarTransacoes();
+      adicionarEventDelegation();
+    } catch (error) {
+      console.error("Erro durante a inicialização:", error);
+    }
+  }
+
+  inicializar();
+});
