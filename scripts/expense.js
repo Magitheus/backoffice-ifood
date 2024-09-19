@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
           (transacao) => transacao.tipo === "saida"
         );
         const dadosGemini = prepararDadosParaGemini(saida);
-        // chamarGemini(dadosGemini);
+        chamarGemini(dadosGemini);
         renderizarTransacoes(saida);
       })
       .catch((error) => console.error("Erro ao carregar o JSON:", error));
