@@ -8,7 +8,7 @@ Esta é uma solução web de **backoffice** robusta e segura, criada especialmen
 - 🔍 **Filtragem personalizada** e **pesquisa rápida** para transações financeiras
 - ✏️ **Cadastro, edição e gerenciamento de receitas** de forma prática
 - 📅 **Controle e histórico de movimentações financeiras**, garantindo transparência
-- 🔔 **Notificações inteligentes** gerenciadas pela IA **Gemani**, fornecendo alertas e atualizações importantes em tempo real
+- 🔔 **Notificações inteligentes** gerenciadas pela IA **Gemini**, fornecendo alertas e atualizações importantes em tempo real
 - 🔐 **Segurança e confiabilidade**, garantindo que os dados estejam sempre protegidos
 
 Desenvolvida com foco na **simplicidade**, **precisão** e **segurança**, essa plataforma torna o gerenciamento financeiro mais acessível e eficiente para os parceiros do iFood.
